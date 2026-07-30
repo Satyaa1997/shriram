@@ -1,6 +1,6 @@
 
 import "./Amenities2.css";
-
+import { Link } from "react-router-dom";
 import heroImg from "../assets/facility.jpg";
 import greenImg from "../assets/img6.jpg";
 import roadImg from "../assets/urban3.webp";
@@ -70,7 +70,7 @@ const Aminities2 = () => {
       {/* ================= GREEN LANDSCAPE ================= */}
 
       <section className="amenity-section" id="green">
-        
+
         <div className="amenity-container">
 
           <div className="amenity-image">
@@ -184,7 +184,7 @@ const Aminities2 = () => {
       {/* ================= SECURITY ================= */}
 
       <section className="amenity-section">
-        
+
         <div className="amenity-container">
 
           <div className="amenity-image">
@@ -237,8 +237,8 @@ const Aminities2 = () => {
         </div>
 
       </section>
-      
-            {/* ================= CLUB HOUSE ================= */}
+
+      {/* ================= CLUB HOUSE ================= */}
 
       <section className="amenity-section dark reverse">
         <div className="blur-shape"></div>
@@ -417,7 +417,7 @@ const Aminities2 = () => {
       {/* ================= CTA ================= */}
 
       <section className="amenities-cta">
-       
+
         <div className="cta-overlay"></div>
 
         <div className="cta-content">
@@ -436,19 +436,16 @@ const Aminities2 = () => {
             comfort, convenience and future growth.
           </p>
 
-          <a href="/contact" className="hero-btn">
-
+          <Link to="/contact" className="hero-btn">
             Book Site Visit
-
             <FaArrowRight />
-
-          </a>
+          </Link>
 
         </div>
 
       </section>
     </main>
-     
+
   );
 
 };
