@@ -1,0 +1,446 @@
+
+/* =========================================
+        FOOTER
+========================================= */
+
+.footer {
+    width: 100%;
+    background: #071418;
+    color: #fff;
+    overflow: hidden;
+}
+
+
+/* =========================================
+        CONTAINER
+========================================= */
+
+.footer-container {
+    width: 100%;
+    max-width: 1450px;
+    margin: auto;
+
+    padding: 80px clamp(20px, 6vw, 70px);
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        0.8fr
+        1.3fr
+        1.2fr;
+
+    gap: 55px;
+}
+
+
+/* =========================================
+        FOOTER BOX
+========================================= */
+
+.footer-box {
+    min-width: 0;
+}
+
+
+/* =========================================
+        LOGO
+========================================= */
+
+.footer-logo {
+    width: 170px;
+    max-width: 100%;
+    height: auto;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+        ABOUT
+========================================= */
+
+.footer-about p {
+    max-width: 400px;
+
+    color: rgba(255,255,255,.68);
+
+    font-size: 15px;
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+        HEADING
+========================================= */
+
+.footer-box h3 {
+    font-family: "Cinzel", serif;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    color: #fff;
+
+    margin: 5px 0 12px;
+}
+
+
+/* Orange Line */
+
+.footer-line {
+    width: 45px;
+    height: 2px;
+
+    background: #e84c22;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+        QUICK LINKS
+========================================= */
+
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-box ul li {
+    margin-bottom: 15px;
+}
+
+.footer-box ul li a {
+    color: rgba(255,255,255,.68);
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: .3s;
+}
+
+.footer-box ul li a:hover {
+    color: #e84c22;
+    padding-left: 6px;
+}
+
+
+/* =========================================
+        CONTACT
+========================================= */
+
+.contact-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 17px;
+}
+
+.contact-item span {
+    min-width: 25px;
+
+    color: #e84c22;
+
+    font-size: 16px;
+}
+
+.contact-item p {
+    margin: 0;
+
+    color: rgba(255,255,255,.68);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.contact-item a {
+    color: rgba(255,255,255,.68);
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.contact-item a:hover {
+    color: #e84c22;
+}
+
+
+/* =========================================
+        BUTTON
+========================================= */
+
+.footer-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 13px 25px;
+
+    background: #e84c22;
+
+    color: #fff;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: .35s;
+}
+
+.footer-btn span {
+    font-size: 18px;
+
+    transition: .35s;
+}
+
+.footer-btn:hover {
+    background: #fff;
+
+    color: #071418;
+
+    transform: translateY(-3px);
+}
+
+.footer-btn:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+        PROJECT TEXT
+========================================= */
+
+.footer-box > p {
+    color: rgba(255,255,255,.68);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    max-width: 330px;
+}
+
+
+/* =========================================
+        SOCIAL
+========================================= */
+
+.footer-social {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.footer-social a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    border-radius: 50%;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.footer-social a:hover {
+    background: #e84c22;
+
+    border-color: #e84c22;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+        BOTTOM
+========================================= */
+
+.footer-bottom {
+    width: 100%;
+
+    padding: 20px clamp(10px, 6vw, 70px);
+
+    border-top: 1px solid rgba(255,255,255,.1);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: rgba(255,255,255,.5);
+
+    font-size: 13px;
+}
+
+.footer-bottom-links {
+    display: flex;
+
+    gap: 25px;
+}
+
+.footer-bottom-links a {
+    color: rgba(255,255,255,.5);
+
+    text-decoration: none;
+
+    font-size: 13px;
+    display: flex;
+    transition: .3s;
+}
+
+.footer-bottom-links a:hover {
+    color: #e84c22;
+}
+
+
+/* =========================================
+        TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .footer-container {
+        grid-template-columns:
+            1.4fr
+            1fr
+            1.4fr;
+
+        gap: 45px;
+    }
+
+    .footer-box:last-child {
+        grid-column: span 3;
+    }
+}
+
+
+/* =========================================
+        MOBILE TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        padding: 60px 25px;
+
+        gap: 45px 30px;
+    }
+
+    .footer-box:last-child {
+        grid-column: span 2;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 20px 25px;
+    }
+}
+
+
+/* =========================================
+        MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        padding: 55px 20px;
+
+        gap: 40px;
+    }
+
+    .footer-box:last-child {
+        grid-column: auto;
+    }
+
+    .footer-logo {
+        width: 145px;
+    }
+
+    .footer-box h3 {
+        font-size: 18px;
+    }
+
+    .footer-about p {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        padding: 18px 20px;
+    }
+
+    .footer-bottom-links {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+
+        line-height: 1.6;
+    }
+}
+
+
+/* =========================================
+        SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .footer-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footer-logo {
+        width: 135px;
+    }
+
+    .footer-btn {
+        padding: 11px 20px;
+    }
+}
+

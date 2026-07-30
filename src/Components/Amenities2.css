@@ -1,0 +1,421 @@
+/*=========================================
+        AMENITIES PAGE
+=========================================*/
+
+.amenities-page{
+    width:100%;
+    background:#071214;
+    overflow:hidden;
+}
+
+/*=========================================
+        HERO
+=========================================*/
+
+.amenities-hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.amenities-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(7,18,20,.65);
+}
+
+.hero-content{
+    position:absolute;
+    top:50%;
+    left:8%;
+    transform:translateY(-50%);
+    max-width:650px;
+    z-index:2;
+}
+
+.hero-content span{
+    color:#e84c22;
+    letter-spacing:3px;
+    font-weight:600;
+}
+
+.hero-content h1{
+    font-size:65px;
+    color:#fff;
+    line-height:1.1;
+    margin:20px 0;
+}
+
+.hero-content h1 em{
+    color:#e84c22;
+    font-style:normal;
+}
+
+.hero-content p{
+    color:#ddd;
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+.hero-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    padding:15px 35px;
+    background:#e84c22;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.4s;
+}
+
+.hero-btn:hover{
+    background:#fff;
+    color:#111;
+}
+
+/*=========================================
+      SECTION
+=========================================*/
+
+.amenity-section{
+    padding:120px 8%;
+    background-color: #ebe2dc;
+}
+/* Orange Circle */
+
+.amenity-section::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(232,76,34,.06);
+    top:-120px;
+    right:-120px;
+}
+.amenity-section::after{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(8,66,152,.05);
+    bottom:-80px;
+    left:-80px;
+}
+.amenity-section.dark{
+    position:relative;
+    background:#071214;
+    overflow:hidden;
+      background:
+        linear-gradient(#071214,#071214),
+        radial-gradient(circle at center,
+        rgba(255,255,255,.05) 1px,
+        transparent 1px);
+
+    background-size:100%,40px 40px;
+}
+
+.amenity-section.dark::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(232,76,34,.08);
+    top:-180px;
+    right:-180px;
+    filter:blur(10px);
+}
+
+.amenity-section.dark::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(255,255,255,.03);
+    bottom:-120px;
+    left:-120px;
+}
+
+.dark .amenity-content h2,
+.dark .amenity-content p,
+.dark .amenity-content li{
+    color:#fff;
+}
+.blur-shape{
+    position:absolute;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    background:#e84c22;
+    filter:blur(100px);
+    opacity:.12;
+    top:50%;
+    right:-100px;
+    transform:translateY(-50%);
+    pointer-events:none;
+}
+.amenity-content{
+    color:#030303;
+}
+
+.amenity-content h2{
+    color:#030303;
+}
+
+.amenity-content p{
+    color:#070101;
+}
+
+.amenity-content li{
+    color:#0c0c0c;
+}
+.amenity-section.dark .amenity-content{
+    color:#fff;
+}
+
+.amenity-section.dark .amenity-content h2{
+    color:#fff;
+}
+
+.amenity-section.dark .amenity-content p{
+    color:#d5d5d5;
+}
+
+.amenity-section.dark .amenity-content li{
+    color:#fff;
+}
+
+.amenity-container{
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:70px;
+}
+
+.reverse .amenity-container{
+    direction:rtl;
+}
+
+.reverse .amenity-content{
+    direction:ltr;
+}
+
+.amenity-image{
+    overflow:hidden;
+    border-radius:25px;
+}
+
+.amenity-image img{
+    width:100%;
+    height:550px;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.amenity-image:hover img{
+    transform:scale(1.08);
+}
+
+/*=========================================
+      CONTENT
+=========================================*/
+
+.amenity-content{
+    color:#fff;
+}
+
+.icon-box{
+    width:75px;
+    height:75px;
+    background:#e84c22;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:36px;
+    color:#fff;
+    margin-bottom:15px;
+}
+
+.amenity-content span{
+    color:#e84c22;
+    letter-spacing:2px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.amenity-content h2{
+    font-size:45px;
+    margin:20px 0;
+    line-height:1.15;
+}
+
+.amenity-content h2 em{
+    color:#e84c22;
+    font-style:normal;
+}
+
+.amenity-content p{
+   
+    line-height:1.9;
+    margin-bottom:18px;
+}
+
+.amenity-content ul{
+    padding:0;
+    margin:0;
+}
+
+.amenity-content li{
+    list-style:none;
+    
+    margin:15px 0;
+    font-size:17px;
+}
+
+/*=========================================
+      CTA
+=========================================*/
+
+.amenities-cta{
+    position:relative;
+    margin-top:0px;
+    padding:130px 8%;
+    background:url("../assets/img2.jpg") center/cover;
+     overflow: hidden;
+     
+}
+
+.cta-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(7,18,20,.82);
+     z-index: 1;
+}
+
+.cta-content{
+    position:relative;
+    z-index:5;
+    max-width:750px;
+    margin:auto;
+    text-align:center;
+}
+
+.cta-content span{
+    color:#e84c22;
+    letter-spacing:3px;
+}
+
+.cta-content h2{
+    color:#fff;
+    font-size:55px;
+    margin:15px 0;
+}
+
+.cta-content h2 em{
+    color:#e84c22;
+    font-style:normal;
+}
+
+.cta-content p{
+    color:#ddd;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+/*=========================================
+      TABLET
+=========================================*/
+
+@media(max-width:992px){
+
+.hero-content h1{
+    font-size:55px;
+}
+
+.amenity-container{
+    grid-template-columns:1fr;
+    gap:45px;
+}
+
+.reverse .amenity-container{
+    direction:ltr;
+}
+
+.amenity-content h2{
+    font-size:42px;
+}
+
+.amenity-image img{
+    height:420px;
+}
+
+.cta-content h2{
+    font-size:45px;
+}
+
+}
+
+/*=========================================
+      MOBILE
+=========================================*/
+
+@media(max-width:576px){
+
+.hero-content{
+    left:6%;
+    right:6%;
+}
+
+.hero-content h1{
+    font-size:40px;
+}
+
+.hero-content p{
+    font-size:15px;
+}
+
+.hero-btn{
+    padding:13px 25px;
+}
+
+.amenity-section{
+    padding:80px 6%;
+}
+
+.amenity-image img{
+    height:300px;
+}
+
+.icon-box{
+    width:65px;
+    height:65px;
+    font-size:28px;
+}
+
+.amenity-content h2{
+    font-size:34px;
+}
+
+.amenity-content li{
+    font-size:15px;
+}
+
+.cta-content h2{
+    font-size:34px;
+}
+
+}

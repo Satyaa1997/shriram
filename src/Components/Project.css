@@ -1,0 +1,1799 @@
+
+/* =========================================================
+   PROJECT PAGE
+   SHRI RAM FILM CITY
+========================================================= */
+
+.project-page {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    color: #171717;
+    font-family: 'Outfit', sans-serif;
+}
+
+.project-page *,
+.project-page *::before,
+.project-page *::after {
+    box-sizing: border-box;
+}
+
+.project-page h1,
+.project-page h2,
+.project-page h3 {
+    font-family: 'Cinzel', serif;
+}
+
+.project-page a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.project-hero {
+    position: relative;
+    min-height: 680px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        url("../assets/about.jpg")
+        center / cover no-repeat;
+
+    isolation: isolate;
+}
+
+.project-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 13, 15, .94) 0%,
+            rgba(5, 13, 15, .72) 45%,
+            rgba(5, 13, 15, .18) 100%
+        );
+
+    z-index: -1;
+}
+
+.project-hero-content {
+    width: 90%;
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 100px 0;
+
+    color: #fff;
+}
+
+.project-label {
+    display: block;
+
+    margin-bottom: 22px;
+
+    color: #e84c22;
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    font-weight: 600;
+}
+
+.project-hero h1 {
+    margin: 0;
+
+    font-size: clamp(55px, 7vw, 100px);
+
+    line-height: 1.02;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+}
+
+.project-hero h1 strong {
+    color: #e84c22;
+    font-weight: 500;
+}
+
+.project-hero p {
+    margin: 28px 0 35px;
+
+    color: rgba(255,255,255,.82);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+.project-hero-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 15px 25px;
+
+    border: 1px solid #e84c22;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    transition: .4s ease;
+}
+
+.project-hero-btn span {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e84c22;
+
+    color: #111;
+}
+
+.project-hero-btn:hover {
+    background: #e84c22;
+    color: #111;
+
+    transform: translateY(-3px);
+}
+
+.hero-scroll {
+    position: absolute;
+
+    right: 5%;
+
+    bottom: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #bbb;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    transform: rotate(90deg);
+    transform-origin: right center;
+}
+
+.hero-scroll span {
+    width: 40px;
+    height: 1px;
+
+    background: #e84c22;
+}
+
+
+/* =========================================================
+   ABOUT PROJECT
+========================================================= */
+
+.project-about {
+    padding: 120px 7%;
+
+    background: #fff;
+}
+
+.project-about-container {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+.project-about-image {
+    position: relative;
+
+    padding: 20px 20px 50px 0;
+}
+
+.project-about-image img {
+    width: 100%;
+    height: 560px;
+
+    display: block;
+
+    object-fit: cover;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.project-image-frame {
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 90%;
+    height: 90%;
+
+    border: 1px solid #e84c22;
+
+    z-index: 1;
+}
+
+.project-image-badge {
+    position: absolute;
+
+    left: -25px;
+    bottom: 10px;
+
+    z-index: 3;
+
+    width: 170px;
+    height: 100px;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background: #e84c22;
+
+    color: #fff;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,.18);
+}
+
+.project-image-badge strong {
+    font-family: 'Cinzel', serif;
+
+    font-size: 38px;
+
+    color: #e84c22;
+}
+
+.project-image-badge span {
+    margin-top: 7px;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: #ddd;
+}
+
+.project-section-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #e84c22;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+.project-about-content h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(40px, 4vw, 58px);
+
+    line-height: 1.2;
+
+    font-weight: 500;
+}
+
+.project-about-content h2 em,
+.master-plan-heading h2 em,
+.master-plan-content h3 em,
+.connectivity-heading h2 em,
+.floor-plan-heading h2 em,
+.floor-plan-info h3 em,
+.project-cta h2 em {
+    color: #e84c22;
+
+    font-style: normal;
+}
+
+.project-about-content > p {
+    max-width: 600px;
+
+    margin: 0 0 17px;
+
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+
+/* FEATURES */
+
+.project-features {
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px 25px;
+}
+
+.project-feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.project-feature span {
+    color: #e84c22;
+
+    font-weight: 700;
+}
+
+.project-feature p {
+    margin: 0;
+
+    color: #444;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+========================================================= */
+
+.project-highlights {
+    position: relative;
+
+    padding: 70px 6%;
+
+    background:
+        url("../assets/about.jpg")
+        center / cover no-repeat;
+
+    isolation: isolate;
+}
+
+.project-highlights-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(6,17,19,.93);
+
+    z-index: -1;
+}
+
+.project-highlights-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+}
+
+.project-highlight {
+    display: flex;
+
+    gap: 18px;
+
+    padding: 20px 30px;
+
+    border-right: 1px solid rgba(255,255,255,.15);
+}
+
+.project-highlight:last-child {
+    border-right: 0;
+}
+
+.project-highlight > strong {
+    color: #e84c22;
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 14px;
+}
+
+.project-highlight h3 {
+    margin: 0 0 8px;
+
+    color: #fff;
+
+    font-size: 19px;
+
+    font-weight: 500;
+}
+
+.project-highlight p {
+    margin: 0;
+
+    color: #999;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   MASTER PLAN
+========================================================= */
+
+.master-plan {
+    padding: 120px 7%;
+
+    background: #f7f5f1;
+}
+
+.master-plan-heading {
+    max-width: 1250px;
+
+    margin: 0 auto 60px;
+}
+
+.master-plan-heading h2 {
+    margin: 0 0 20px;
+
+    font-size: clamp(42px,4vw,60px);
+
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+.master-plan-heading p {
+    max-width: 600px;
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+.master-plan-container {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.25fr .75fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.master-plan-image {
+    position: relative;
+
+    padding: 20px;
+}
+
+.master-plan-image img {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    display: block;
+
+    background: #fff;
+}
+
+.master-plan-border {
+    position: absolute;
+
+    inset: 0;
+
+    border: 1px solid #e84c22;
+
+    z-index: 1;
+}
+
+.master-plan-content > span {
+    color: #999;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+.master-plan-content h3 {
+    margin: 15px 0 20px;
+
+    font-size: 42px;
+
+    font-weight: 500;
+
+    line-height: 1.25;
+}
+
+.master-plan-content > p {
+    margin: 0;
+
+    color: #666;
+
+    line-height: 1.8;
+}
+
+.plan-points {
+    margin-top: 30px;
+}
+
+.plan-points > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.plan-points span {
+    color: #e84c22;
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 13px;
+}
+
+.plan-points p {
+    margin: 0;
+
+    color: #333;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   CONNECTIVITY
+========================================================= */
+
+/* =========================================================
+   CONNECTIVITY
+========================================================= */
+
+.connectivity {
+
+    padding: 120px 7%;
+
+    background: #071416;
+
+    color: #fff;
+
+}
+
+
+/* MAIN CONTAINER */
+
+.connectivity-container {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 90px;
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   LEFT IMAGE
+========================================================= */
+
+.connectivity-image {
+
+    position: relative;
+
+    padding: 18px 18px 35px 0;
+
+}
+
+
+.connectivity-image img {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 107%;
+
+    height: 450px;
+
+    display: block;
+
+    object-fit: contain;
+
+}
+
+
+.connectivity-image-frame {
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 102%;
+
+    border: 1px solid #e84c22;
+
+    z-index: 1;
+
+}
+
+
+/* LOCATION BADGE */
+
+.location-badge {
+
+    position: absolute;
+
+    z-index: 4;
+
+    left: -25px;
+
+    bottom: 5px;
+
+    width: 175px;
+
+    padding: 22px;
+
+    background: #e84c22;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.3);
+
+}
+
+
+.location-badge span {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #111;
+
+}
+
+
+.location-badge strong {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 22px;
+
+    color: #fff;
+
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.connectivity-content {
+
+    width: 100%;
+    background-color: #071416;
+    padding: 20px;
+
+}
+
+
+/* HEADING */
+
+.connectivity-heading {
+
+    margin-bottom: 35px;
+
+}
+
+
+.connectivity-heading h2 {
+
+    margin: 0 0 18px;
+
+    color: #fff;
+
+    font-size: clamp(42px, 4vw, 60px);
+
+    line-height: 1.15;
+
+    font-weight: 500;
+
+}
+
+
+.connectivity-heading h2 em {
+
+    color: #e84c22;
+
+    font-style: normal;
+
+}
+
+
+.connectivity-heading p {
+
+    max-width: 560px;
+
+    margin: 0;
+
+    color: #aaa;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   CONNECTIVITY LIST
+========================================================= */
+
+.connectivity-list {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+
+}
+
+
+/* BOX */
+
+.connectivity-item {
+
+    position: relative;
+
+    min-height: 105px;
+
+    padding: 20px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    border: 1px solid rgba(255,255,255,.13);
+
+    background: rgba(255,255,255,.035);
+
+    transition: .4s ease;
+
+    overflow: hidden;
+
+}
+
+
+/* NUMBER */
+
+.connectivity-number {
+
+    flex-shrink: 0;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #e84c22;
+
+    color: #e84c22;
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 12px;
+
+    transition: .4s ease;
+
+}
+
+
+/* TITLE */
+
+.connectivity-item h3 {
+
+    margin: 0 0 5px;
+
+    color: #fff;
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+}
+
+
+.connectivity-item strong {
+
+    color: #e84c22;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+}
+
+
+/* ARROW */
+
+.connectivity-arrow {
+
+    position: absolute;
+
+    right: 18px;
+
+    top: 18px;
+
+    color: #777;
+
+    font-size: 17px;
+
+    transition: .4s ease;
+
+}
+
+
+/* HOVER */
+
+.connectivity-item:hover {
+
+    background: #e84c22;
+
+    border-color: #e84c22;
+
+    transform: translateY(-4px);
+
+}
+
+
+.connectivity-item:hover .connectivity-number {
+
+    border-color: #111;
+
+    background: #111;
+
+    color: #e84c22;
+
+}
+
+
+.connectivity-item:hover h3,
+
+.connectivity-item:hover strong,
+
+.connectivity-item:hover .connectivity-arrow {
+
+    color: #111;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1000px) {
+
+    .connectivity {
+
+        padding: 100px 5%;
+
+    }
+
+
+    .connectivity-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+
+    }
+
+
+    .connectivity-image {
+
+        max-width: 700px;
+
+        width: 100%;
+
+        margin: auto;
+
+    }
+
+
+    .connectivity-image img {
+
+        height: 500px;
+
+    }
+
+
+    .connectivity-content {
+
+        max-width: 750px;
+
+        margin: auto;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:576px) {
+
+    .connectivity {
+
+        padding: 75px 6%;
+
+    }
+
+
+    .connectivity-container {
+
+        gap: 55px;
+
+    }
+
+
+    /* IMAGE */
+
+    .connectivity-image {
+
+        padding: 12px 12px 35px 0;
+
+    }
+
+
+    .connectivity-image img {
+
+        height: 400px;
+
+    }
+
+
+    .connectivity-image-frame {
+
+        width: 90%;
+
+        height: 90%;
+
+    }
+
+
+    .location-badge {
+
+        left: -5px;
+
+        bottom: 0;
+
+        width: 140px;
+
+        padding: 16px;
+
+    }
+
+
+    .location-badge span {
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .location-badge strong {
+
+        font-size: 18px;
+
+    }
+
+
+    /* HEADING */
+
+    .connectivity-heading {
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .connectivity-heading h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    .connectivity-heading p {
+
+        font-size: 14px;
+
+        line-height: 1.8;
+
+    }
+
+
+    /* BOXES */
+
+    .connectivity-list {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+    }
+
+
+    .connectivity-item {
+
+        min-height: 90px;
+
+        padding: 17px;
+
+    }
+
+
+    .connectivity-number {
+
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 11px;
+
+    }
+
+
+    .connectivity-item h3 {
+
+        font-size: 15px;
+
+    }
+
+
+    .connectivity-item strong {
+
+        font-size: 11px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:380px) {
+
+    .connectivity-image img {
+
+        height: 340px;
+
+    }
+
+
+    .connectivity-heading h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .connectivity-item {
+
+        padding: 14px;
+
+    }
+
+}
+
+
+/* =========================================================
+   FLOOR PLAN
+========================================================= */
+
+.floor-plan {
+    padding: 120px 7%;
+
+    background: #fff;
+}
+
+.floor-plan-heading {
+    max-width: 1250px;
+
+    margin: 0 auto 60px;
+}
+
+.floor-plan-heading h2 {
+    margin: 0 0 20px;
+
+    font-size: clamp(42px,4vw,60px);
+
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+.floor-plan-heading p {
+    max-width: 600px;
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+.floor-plan-container {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+.floor-plan-image {
+    padding: 15px;
+
+    border: 1px solid #e84c22;
+}
+
+.floor-plan-image img {
+    width: 100%;
+
+    height: 480px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.floor-number {
+    color: #e84c22;
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+}
+
+.floor-plan-info h3 {
+    margin: 15px 0 20px;
+
+    font-size: 43px;
+
+    font-weight: 500;
+
+    line-height: 1.25;
+}
+
+.floor-plan-info > p {
+    color: #666;
+
+    line-height: 1.8;
+}
+
+.floor-info-list {
+    margin-top: 30px;
+}
+
+.floor-info-list > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.floor-info-list span {
+    color: #e84c22;
+
+    font-weight: 700;
+}
+
+.floor-info-list p {
+    margin: 0;
+
+    color: #333;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.project-cta {
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        url("../assets/about.jpg")
+        center / cover no-repeat;
+
+    isolation: isolate;
+}
+
+.project-cta-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(4,13,15,.90),
+            rgba(4,13,15,.90)
+        );
+
+    z-index: -1;
+}
+
+.project-cta-content {
+    width: 90%;
+    max-width: 800px;
+
+    color: #fff;
+}
+
+.project-cta-content > span {
+    color: #e84c22;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+}
+
+.project-cta h2 {
+    margin: 20px 0;
+
+    font-size: clamp(45px,5vw,72px);
+
+    font-weight: 500;
+
+    line-height: 1.15;
+}
+
+.project-cta p {
+    max-width: 550px;
+
+    margin: 0 auto 30px;
+
+    color: #bbb;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+.project-cta-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 15px 28px;
+
+    background: #e84c22;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    transition: .4s ease;
+}
+
+.project-cta-btn span {
+    font-size: 20px;
+
+    transition: .4s ease;
+}
+
+.project-cta-btn:hover {
+    background: #fff;
+
+    color: #111;
+
+    transform: translateY(-4px);
+}
+
+.project-cta-btn:hover span {
+    transform: translate(5px,-5px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1000px) {
+
+    .project-about-container,
+    .master-plan-container,
+    .connectivity-container,
+    .floor-plan-container {
+        gap: 60px;
+    }
+
+    .project-about,
+    .master-plan,
+    .connectivity,
+    .floor-plan {
+        padding: 100px 5%;
+    }
+
+    .project-highlights-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-highlight {
+        padding: 25px;
+
+        border-bottom: 1px solid rgba(255,255,255,.15);
+    }
+
+    .project-highlight:nth-child(2) {
+        border-right: 0;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media(max-width:800px) {
+
+    .project-about-container,
+    .master-plan-container,
+    .connectivity-container,
+    .floor-plan-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-about-image,
+    .master-plan-image,
+    .floor-plan-image {
+        max-width: 700px;
+
+        width: 100%;
+
+        margin: auto;
+    }
+
+    .project-about-content,
+    .master-plan-content,
+    .floor-plan-info {
+        max-width: 700px;
+
+        margin: auto;
+    }
+
+    .connectivity-heading {
+        max-width: 700px;
+    }
+
+    .project-about-image img {
+        height: 520px;
+    }
+
+    .master-plan-image img {
+        height: 450px;
+    }
+
+    .floor-plan-image img {
+        height: 430px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:576px) {
+
+    .project-hero {
+        min-height: 620px;
+    }
+
+    .project-hero-content {
+        padding: 80px 0;
+    }
+
+    .project-label {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 18px;
+    }
+
+    .project-hero h1 {
+        font-size: 50px;
+
+        letter-spacing: -1px;
+    }
+
+    .project-hero p {
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        margin: 22px 0 28px;
+    }
+
+    .desktop-break {
+        display: none;
+    }
+
+    .project-hero-btn {
+        padding: 13px 18px;
+
+        font-size: 12px;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+
+    /* ABOUT */
+
+    .project-about {
+        padding: 75px 6%;
+    }
+
+    .project-about-container {
+        gap: 55px;
+    }
+
+    .project-about-image {
+        padding: 12px 12px 40px 0;
+    }
+
+    .project-about-image img {
+        height: 390px;
+    }
+
+    .project-image-frame {
+        width: 88%;
+        height: 88%;
+    }
+
+    .project-image-badge {
+        left: -5px;
+        bottom: 0;
+
+        width: 135px;
+        height: 110px;
+
+        padding: 15px;
+    }
+
+    .project-image-badge strong {
+        font-size: 30px;
+    }
+
+    .project-image-badge span {
+        font-size: 9px;
+    }
+
+    .project-section-label {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 14px;
+    }
+
+    .project-about-content h2 {
+        font-size: 35px;
+    }
+
+    .project-about-content > p {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+    .project-features {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    /* HIGHLIGHTS */
+
+    .project-highlights {
+        padding: 45px 6%;
+    }
+
+    .project-highlights-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-highlight {
+        padding: 20px 0;
+
+        border-right: 0;
+    }
+
+    .project-highlight:last-child {
+        border-bottom: 0;
+    }
+
+
+    /* MASTER */
+
+    .master-plan {
+        padding: 75px 6%;
+    }
+
+    .master-plan-container {
+        gap: 50px;
+    }
+
+    .master-plan-heading {
+        margin-bottom: 40px;
+    }
+
+    .master-plan-heading h2 {
+        font-size: 35px;
+    }
+
+    .master-plan-heading p {
+        font-size: 14px;
+    }
+
+    .master-plan-image {
+        padding: 10px;
+    }
+
+    .master-plan-image img {
+        height: 330px;
+    }
+
+    .master-plan-content h3 {
+        font-size: 34px;
+    }
+
+
+    /* CONNECTIVITY */
+
+    .connectivity {
+        padding: 75px 6%;
+    }
+
+    .connectivity-container {
+        gap: 45px;
+    }
+
+    .connectivity-heading h2 {
+        font-size: 35px;
+    }
+
+    .connectivity-heading p {
+        font-size: 14px;
+    }
+
+    .connectivity-list {
+        grid-template-columns: 1fr;
+    }
+
+    .connectivity-item {
+        padding: 18px 0;
+    }
+
+
+    /* FLOOR PLAN */
+
+    .floor-plan {
+        padding: 75px 6%;
+    }
+
+    .floor-plan-heading {
+        margin-bottom: 40px;
+    }
+
+    .floor-plan-heading h2 {
+        font-size: 35px;
+    }
+
+    .floor-plan-heading p {
+        font-size: 14px;
+    }
+
+    .floor-plan-image {
+        padding: 10px;
+    }
+
+    .floor-plan-image img {
+        height: 320px;
+    }
+
+    .floor-plan-info h3 {
+        font-size: 34px;
+    }
+
+
+    /* CTA */
+
+    .project-cta {
+        min-height: 470px;
+    }
+
+    .project-cta-content > span {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+    .project-cta h2 {
+        font-size: 40px;
+
+        margin: 18px 0;
+    }
+
+    .project-cta p {
+        font-size: 14px;
+
+        max-width: 330px;
+    }
+
+    .project-cta-btn {
+        padding: 13px 20px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:380px) {
+
+    .project-hero h1 {
+        font-size: 43px;
+    }
+
+    .project-about-content h2,
+    .master-plan-heading h2,
+    .connectivity-heading h2,
+    .floor-plan-heading h2 {
+        font-size: 31px;
+    }
+
+    .project-about-image img {
+        height: 340px;
+    }
+
+    .master-plan-image img,
+    .floor-plan-image img {
+        height: 280px;
+    }
+
+    .project-cta h2 {
+        font-size: 34px;
+    }
+
+}
+
