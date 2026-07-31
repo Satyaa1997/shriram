@@ -15,6 +15,7 @@ import {
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
 
   return (
     <header className="header">
@@ -66,48 +67,57 @@ const Navbar = () => {
               Home
             </NavLink>
           </li>
-          <li className="dropdown">
+          <li className={`dropdown ${aboutOpen ? "open" : ""}`}>
 
-            <NavLink
-              to="/about"
-              className={({ isActive }) => (isActive ? "active" : "")}
-              onClick={() => setMenuOpen(false)}
-            >
-              About
-            </NavLink>
+  <button
+    type="button"
+    className="dropdown-toggle"
+    onClick={() => setAboutOpen(!aboutOpen)}
+  >
+    About <span>{aboutOpen ? "▲" : "▼"}</span>
+  </button>
 
-            <ul className="dropdown-menu">
+  <ul className="dropdown-menu">
 
-              <li>
-                <NavLink
-                  to="/about"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  About Us
-                </NavLink>
-              </li>
+    <li>
+      <NavLink
+        to="/about"
+        onClick={() => {
+          setMenuOpen(false);
+          setAboutOpen(false);
+        }}
+      >
+        About Us
+      </NavLink>
+    </li>
 
-               <li>
-                <NavLink
-                  to="/company-overview"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Company Overview
-                </NavLink>
-              </li>
+    <li>
+      <NavLink
+        to="/company-overview"
+        onClick={() => {
+          setMenuOpen(false);
+          setAboutOpen(false);
+        }}
+      >
+        Company Overview
+      </NavLink>
+    </li>
 
-              <li>
-                <NavLink
-                  to="/about-director"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  About Director
-                </NavLink>
-              </li>
+    <li>
+      <NavLink
+        to="/about-director"
+        onClick={() => {
+          setMenuOpen(false);
+          setAboutOpen(false);
+        }}
+      >
+        About Director
+      </NavLink>
+    </li>
 
-            </ul>
+  </ul>
 
-          </li>
+</li>
 
           <li>
             <NavLink

@@ -9,10 +9,12 @@ import Contact from './Components/Contact';
 import AboutDir from './Components/AboutDir';
 import Footer from './Components/Footer';
 import Gallery from './Components/Gallery';
+import Scrool from './Components/Scrool';
 
 const App = () => {
   return (
     <div>
+      <Scrool />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home/>} />
