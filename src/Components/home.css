@@ -97,47 +97,31 @@ body{
 
 /* Sound Button */
 
-
 .sound-btn{
-
     position:absolute;
-
     right:40px;
-
     bottom:40px;
+    z-index:10;
 
     width:50px;
-
     height:50px;
-
-    border-radius:50%;
-
     border:none;
-
+    border-radius:50%;
     background:#e84c22;
-
     color:#fff;
-
-    font-size:22px;
-
+    display:flex;
+    justify-content:center;
+    align-items:center;
     cursor:pointer;
-
-    z-index:5;
-
-    transition:.3s;
-
+    font-size:20px;
+    transition:.3s ease;
 }
-
-
 
 .sound-btn:hover{
-
-    background:#d4af37;
-
-    transform:scale(1.1);
-
+    background:#fff;
+    color:#e84c22;
+    transform:scale(1.08);
 }
-
 
 
 /* Hero Content */
@@ -1287,5 +1271,243 @@ rgba(0,0,0,.35)
 
 }
 
+
+}
+/*=========================================
+      FLOATING MINI PLAYER
+=========================================*/
+
+.floating-player{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:320px;
+
+    aspect-ratio:16/9;
+
+    background:#000;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    z-index:9999;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.35);
+
+    animation:playerShow .45s ease;
+
+}
+
+.floating-player video{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+
+/*=========================================
+      CLOSE BUTTON
+=========================================*/
+
+.floating-close{
+
+    position:absolute;
+
+    top:10px;
+
+    right:10px;
+
+    width:35px;
+
+    height:35px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(0,0,0,.65);
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.35s;
+
+}
+
+.floating-close:hover{
+
+    background:#e84c22;
+
+}
+
+
+/*=========================================
+      SOUND BUTTON
+=========================================*/
+
+.floating-sound{
+
+    position:absolute;
+
+    bottom:10px;
+
+    right:10px;
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#e84c22;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.35s;
+
+}
+
+.floating-sound:hover{
+
+    background:#fff;
+
+    color:#e84c22;
+
+}
+
+
+/*=========================================
+      ANIMATION
+=========================================*/
+
+@keyframes playerShow{
+
+0%{
+
+opacity:0;
+
+transform:translateY(60px) scale(.75);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+}
+
+}
+
+
+/*=========================================
+      TABLET
+=========================================*/
+
+@media(max-width:992px){
+
+.floating-player{
+
+width:280px;
+
+right:15px;
+
+bottom:15px;
+
+}
+
+}
+
+
+/*=========================================
+      MOBILE
+=========================================*/
+
+@media(max-width:768px){
+
+.floating-player{
+
+width:220px;
+
+right:12px;
+
+bottom:12px;
+
+border-radius:14px;
+
+}
+
+.floating-close{
+
+width:30px;
+
+height:30px;
+
+font-size:13px;
+
+}
+
+.floating-sound{
+
+width:32px;
+
+height:32px;
+
+font-size:14px;
+
+}
+
+}
+
+
+/*=========================================
+      SMALL MOBILE
+=========================================*/
+
+@media(max-width:480px){
+
+.floating-player{
+
+width:190px;
+
+right:10px;
+
+bottom:10px;
+
+}
 
 }

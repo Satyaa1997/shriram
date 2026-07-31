@@ -1,7 +1,7 @@
 import "./home.css";
+import { FaVolumeUp, FaVolumeMute, FaTimes } from "react-icons/fa";
 import React, { useEffect, useState, useRef } from "react";
 import heroVideo from "../assets/video.mp4";
-import Footer from "./Footer";
 import Aminities from "./Aminities";
 import township from "../assets/township.jpg";
 import green from "../assets/img6.jpg";
@@ -9,16 +9,15 @@ import road from "../assets/road.jpg";
 import security from "../assets/security.jpg";
 import investment from "../assets/return.jpg";
 import location from "../assets/map.png";
+import FloatingVedio from "./FloatingVedio";
 
 const Home = () => {
-  const [hideContent, setHideContent] = useState(false);
+ 
   const [countStart, setCountStart] = useState(false);
 
   const achievementRef = useRef(null);
 
-  const [isMuted, setIsMuted] = useState(true);
-
-  const videoRef = useRef(null);
+ 
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -27,11 +26,6 @@ const Home = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const toggleMute = () => {
-    videoRef.current.muted = !isMuted;
-
-    setIsMuted(!isMuted);
-  };
 
   useEffect(() => {
 
@@ -69,34 +63,7 @@ const Home = () => {
   }, []);
   return (
     <>
-      <section className="hero">
-        <video
-          ref={videoRef}
-          className="hero-video"
-          autoPlay
-          muted={isMuted}
-          loop
-          playsInline
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
-        <button className="sound-btn" onClick={toggleMute}>
-          {isMuted ? "🔇" : "🔊"}
-        </button>
-
-        <div className="hero-overlay"></div>
-
-        <div className={`hero-content ${hideContent ? "hide-content" : ""}`}>
-          <span>Premium Township</span>
-
-          <h1>Shri Ram Film City</h1>
-
-          <p>
-            Experience luxury living surrounded by nature, world-class amenities
-            and thoughtfully planned. spaces.
-          </p>
-        </div>
-      </section>
+      <FloatingVedio />
       <Aminities />
 
 
@@ -308,7 +275,7 @@ const Home = () => {
 
       </section>
 
-      <Footer />
+      
     </>
   );
 };
@@ -367,3 +334,34 @@ export default Home;
 
 
 
+/*
+<section ref={heroRef} className="hero">
+        <video
+          ref={videoRef}
+          className="hero-video"
+          autoPlay
+          muted={isMuted}
+          loop
+          playsInline
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        <button className="sound-btn" onClick={toggleMute}>
+             {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
+         </button>
+
+        <div className="hero-overlay"></div>
+
+        <div className={`hero-content ${hideContent ? "hide-content" : ""}`}>
+          <span>Premium Township</span>
+
+          <h1>Shri Ram Film City</h1>
+
+          <p>
+            Experience luxury living surrounded by nature, world-class amenities
+            and thoughtfully planned. spaces.
+          </p>
+        </div>
+      </section>
+
+*/

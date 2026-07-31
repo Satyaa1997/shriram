@@ -7,6 +7,7 @@ import Project from './Components/Project';
 import Aminities2 from './Components/Aminities2';
 import Contact from './Components/Contact';
 import AboutDir from './Components/AboutDir';
+import Footer from './Components/Footer';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/contact" element={<Contact/>} />
         <Route path="/about-director" element={<AboutDir />} />
       </Routes>
+      <Footer />
     </div>
   )
 }
