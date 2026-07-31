@@ -1,172 +1,243 @@
-import React, { useState, useEffect, useRef } from "react";
-import {
-  FaVolumeUp,
-  FaVolumeMute,
-  FaTimes,
-} from "react-icons/fa";
-import "./Floatingvedio.css";
+import React, { useEffect, useRef, useState } from "react";
+import "./FloatingVedio.css";
 import heroVideo from "../assets/video.mp4";
+import {
+    FaVolumeMute,
+    FaVolumeUp,
+    FaTimes,
+    FaPlay,
+    FaPause,
+} from "react-icons/fa";
 
 function FloatingVedio() {
-   const heroRef = useRef(null);
+    const heroRef = useRef(null);
+    const heroVideoRef = useRef(null);
+    const floatingVideoRef = useRef(null);
 
-  const videoRef = useRef(null);
+    const [showMini, setShowMini] = useState(false);
+    const [closed, setClosed] = useState(false);
+    const [heroMuted, setHeroMuted] = useState(true);
+    const [miniMuted, setMiniMuted] = useState(true);
+    const [heroPlaying, setHeroPlaying] = useState(true);
+    const [miniPlaying, setMiniPlaying] = useState(true);
 
-  const [hideContent, setHideContent] = useState(false);
+    const toggleHeroPlay = () => {
+        if (!heroVideoRef.current) return;
 
-  const [isMuted, setIsMuted] = useState(true);
-
-  const [showMiniPlayer, setShowMiniPlayer] = useState(false);
-
-  const [closeMiniPlayer, setCloseMiniPlayer] = useState(false);
-
-  useEffect(() => {
-
-    const timer = setTimeout(() => {
-
-      setHideContent(true);
-
-    }, 5000);
-
-    return () => clearTimeout(timer);
-
-  }, []);
-
-  useEffect(() => {
-
-    const observer = new IntersectionObserver(
-
-      ([entry]) => {
-
-        if (!entry.isIntersecting) {
-
-          setShowMiniPlayer(true);
-
+        if (heroPlaying) {
+            heroVideoRef.current.pause();
         } else {
-
-          setShowMiniPlayer(false);
-
+            heroVideoRef.current.play();
         }
 
-      },
+        setHeroPlaying(!heroPlaying);
+    };
 
-      {
-        threshold: 0.25,
-      }
+    const toggleMiniPlay = () => {
+        if (!floatingVideoRef.current) return;
 
-    );
+        if (miniPlaying) {
+            floatingVideoRef.current.pause();
+        } else {
+            floatingVideoRef.current.play();
+        }
 
-    if (heroRef.current) {
+        setMiniPlaying(!miniPlaying);
+    };
 
-      observer.observe(heroRef.current);
 
-    }
+    // Hide hero content after 5 sec
+    const [hideContent, setHideContent] = useState(false);
 
-    return () => observer.disconnect();
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setHideContent(true);
+        }, 5000);
 
-  }, []);
+        return () => clearTimeout(timer);
+    }, []);
 
-  const toggleMute = () => {
 
-    if (videoRef.current) {
 
-      videoRef.current.muted = !isMuted;
 
-    }
+    // Show Mini Player on Scroll
+    // Show Mini Player on Scroll
+    useEffect(() => {
 
-    setIsMuted(!isMuted);
+        const handleScroll = () => {
 
-  };
+            if (closed) return;
 
-  return (
-    <>
+            if (!heroRef.current) return;
 
-      <section ref={heroRef} className="hero">
 
-        <video
-          ref={videoRef}
-          className="hero-video"
-          autoPlay
-          muted={isMuted}
-          loop
-          playsInline
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
+            const rect = heroRef.current.getBoundingClientRect();
 
-        <button
-          className="sound-btn"
-          onClick={toggleMute}
-        >
-          {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
-        </button>
 
-        <div className="hero-overlay"></div>
+            // Mobile aur Desktop trigger
+            const triggerPoint =
+                window.innerWidth <= 576 ? 80 : 150;
 
-        <div
-          className={`hero-content ${
-            hideContent ? "hide-content" : ""
-          }`}
-        >
 
-          <span>Premium Township</span>
+            if (rect.bottom <= triggerPoint) {
 
-          <h1>Shri Ram Film City</h1>
+                setShowMini(true);
 
-          <p>
-            Experience luxury living surrounded by
-            nature, world-class amenities and
-            thoughtfully planned spaces.
-          </p>
+            } else {
 
-        </div>
+                setShowMini(false);
 
-      </section>
-
-      {showMiniPlayer && !closeMiniPlayer && (
-
-        <div className="floating-player">
-
-          <video
-            autoPlay
-            loop
-            muted={isMuted}
-            playsInline
-          >
-            <source
-              src={heroVideo}
-              type="video/mp4"
-            />
-          </video>
-
-          <button
-            className="floating-close"
-            onClick={() =>
-              setCloseMiniPlayer(true)
             }
-          >
-            <FaTimes />
-          </button>
 
-          <button
-            className="floating-sound"
-            onClick={() =>
-              setIsMuted(!isMuted)
-            }
-          >
-            {isMuted ? (
-              <FaVolumeMute />
-            ) : (
-              <FaVolumeUp />
+        };
+
+
+        window.addEventListener("scroll", handleScroll);
+
+
+        handleScroll();
+
+
+        return () => {
+
+            window.removeEventListener(
+                "scroll",
+                handleScroll
+            );
+
+        };
+
+
+    }, [closed]);
+
+
+
+
+    // Mute / Unmute
+    const toggleHeroMute = () => {
+        const value = !heroMuted;
+
+        setHeroMuted(value);
+
+        if (heroVideoRef.current) {
+            heroVideoRef.current.muted = value;
+        }
+    };
+    const toggleMiniMute = () => {
+        const value = !miniMuted;
+
+        setMiniMuted(value);
+
+        if (floatingVideoRef.current) {
+            floatingVideoRef.current.muted = value;
+        }
+    };
+
+    // Click mini player
+    const scrollToHero = () => {
+        heroRef.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    };
+
+    // Close Mini Player
+    const closeMini = () => {
+        setClosed(true);
+        setShowMini(false);
+    };
+
+    return (
+        <>
+            {/* HERO VIDEO */}
+
+            <section
+                ref={heroRef}
+                className={`hero ${showMini ? "hero-hide" : ""}`}
+            >
+
+                <video
+                    ref={heroVideoRef}
+                    className="hero-video"
+                    autoPlay
+                    loop
+                    muted={heroMuted}
+                    playsInline
+                >
+                    <source src={heroVideo} type="video/mp4" />
+                </video>
+
+                <div className="hero-overlay"></div>
+
+                <div
+                    className={`hero-content ${hideContent ? "hide-content" : ""
+                        }`}
+                >
+                    <span>Premium Township</span>
+
+                    <h1>Shri Ram Film City</h1>
+
+                    <p>
+                        Experience luxury living surrounded by
+                        nature, world-class amenities and
+                        thoughtfully planned spaces.
+                    </p>
+                </div>
+
+                <button
+                    className="sound-btn"
+                    onClick={toggleHeroMute} >
+                    {heroMuted ? <FaVolumeMute /> : <FaVolumeUp />}
+                </button>
+                <button
+                    className="play-btn"
+                    onClick={toggleHeroPlay}
+                >
+                    {heroPlaying ? <FaPause /> : <FaPlay />}
+                </button>
+
+            </section>
+
+            {/* FLOATING PLAYER */}
+
+            {showMini && !closed && (
+                <div className="mini-player">
+
+                    <video
+                        ref={floatingVideoRef}
+                        autoPlay
+                        loop
+                        muted={miniMuted}
+                        playsInline
+                        onClick={scrollToHero}
+                    >
+                        <source src={heroVideo} type="video/mp4" />
+                    </video>
+
+                    <button
+                        className="mini-sound"
+                        onClick={toggleMiniMute}
+                    >
+                        {miniMuted ? <FaVolumeMute /> : <FaVolumeUp />}
+                    </button>
+                    <button
+                        className="mini-play"
+                        onClick={toggleMiniPlay}
+                    >
+                        {miniPlaying ? <FaPause /> : <FaPlay />}
+                    </button>
+
+                    <button
+                        className="mini-close"
+                        onClick={closeMini}
+                    >
+                        <FaTimes />
+                    </button>
+
+                </div>
             )}
-          </button>
-
-        </div>
-
-      )}
-
-    </>
-  );
+        </>
+    );
 }
 
-export default FloatingVedio
+export default FloatingVedio;
