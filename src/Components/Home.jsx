@@ -1,5 +1,5 @@
 import "./home.css";
-
+import { useNavigate } from "react-router-dom";
 import Aminities from "./Aminities";
 import township from "../assets/township.jpg";
 import green from "../assets/img6.jpg";
@@ -11,7 +11,8 @@ import FloatingVedio from "./FloatingVedio";
 import directorImg from "../assets/Director2.png"
 
 const Home = () => {
- 
+  const navigate = useNavigate();
+
   return (
     <>
       <FloatingVedio />
@@ -20,205 +21,205 @@ const Home = () => {
 
       <section className="luxury-section">
 
-  <div className="luxury-container">
+        <div className="luxury-container">
 
 
-    <div className="luxury-left">
+          <div className="luxury-left">
 
-      <span>
-        WHY SHRI RAM FILM CITY
-      </span>
+            <span>
+              WHY SHRI RAM FILM CITY
+            </span>
 
-      <h2>
-        A Lifestyle Beyond
-        <br />
-        Ordinary Living
-      </h2>
+            <h2>
+              A Lifestyle Beyond
+              <br />
+              Ordinary Living
+            </h2>
 
-      <p>
-        A thoughtfully planned township designed with
-        modern infrastructure, premium amenities and
-        a peaceful environment for a better lifestyle.
-      </p>
-
-
-      <button>
-        Explore More →
-      </button>
+            <p>
+              A thoughtfully planned township designed with
+              modern infrastructure, premium amenities and
+              a peaceful environment for a better lifestyle.
+            </p>
 
 
-    </div>
+            <button onClick={() => navigate("/about")}>
+             Explore More →
+            </button>
+
+
+          </div>
 
 
 
-    <div className="luxury-right">
+          <div className="luxury-right">
 
 
-      <div className="feature-item">
+            <div className="feature-item">
 
-        <div className="feature-number">
-          01
+              <div className="feature-number">
+                01
+              </div>
+
+              <div>
+                <h3>
+                  Premium Location
+                </h3>
+
+                <p>
+                  Strategically located with excellent
+                  connectivity to major cities and highways.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <div className="feature-item">
+
+              <div className="feature-number">
+                02
+              </div>
+
+              <div>
+                <h3>
+                  Future Growth Opportunity
+                </h3>
+
+                <p>
+                  Smart investment destination with
+                  high appreciation potential.
+                </p>
+              </div>
+
+            </div>
+
+
+
+
+            <div className="feature-item">
+
+              <div className="feature-number">
+                03
+              </div>
+
+              <div>
+                <h3>
+                  Modern Infrastructure
+                </h3>
+
+                <p>
+                  Wide roads, green spaces and planned
+                  development for comfortable living.
+                </p>
+              </div>
+
+            </div>
+
+
+
+
+            <div className="feature-item">
+
+              <div className="feature-number">
+                04
+              </div>
+
+              <div>
+                <h3>
+                  Secure Community
+                </h3>
+
+                <p>
+                  Gated township with advanced security
+                  and family-friendly environment.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div className="feature-item">
+
+              <div className="feature-number">
+                05
+              </div>
+
+              <div>
+                <h3>
+                  Future-Ready Development
+                </h3>
+
+                <p>
+                  A next-generation township concept designed to
+                  meet modern lifestyle needs and future expectations.
+                </p>
+              </div>
+
+            </div>
+
+
+
+
+          </div>
+
+
         </div>
 
-        <div>
-          <h3>
-            Premium Location
-          </h3>
 
-          <p>
-            Strategically located with excellent
-            connectivity to major cities and highways.
-          </p>
-        </div>
-
-      </div>
-
-
-
-      <div className="feature-item">
-
-        <div className="feature-number">
-          02
-        </div>
-
-        <div>
-          <h3>
-            Future Growth Opportunity
-          </h3>
-
-          <p>
-            Smart investment destination with
-            high appreciation potential.
-          </p>
-        </div>
-
-      </div>
-
-
-
-
-      <div className="feature-item">
-
-        <div className="feature-number">
-          03
-        </div>
-
-        <div>
-          <h3>
-            Modern Infrastructure
-          </h3>
-
-          <p>
-            Wide roads, green spaces and planned
-            development for comfortable living.
-          </p>
-        </div>
-
-      </div>
-
-
-
-
-      <div className="feature-item">
-
-        <div className="feature-number">
-          04
-        </div>
-
-        <div>
-          <h3>
-            Secure Community
-          </h3>
-
-          <p>
-            Gated township with advanced security
-            and family-friendly environment.
-          </p>
-        </div>
-
-      </div>
-
-
-       <div className="feature-item">
-
-        <div className="feature-number">
-          05
-        </div>
-
-        <div>
-          <h3>
-           Future-Ready Development
-          </h3>
-
-          <p>
-            A next-generation township concept designed to
-             meet modern lifestyle needs and future expectations.
-          </p>
-        </div>
-
-      </div>
-
-
-
-
-    </div>
-
-
-  </div>
-
-
-     </section>
+      </section>
 
       {/* Director Section */}
-  <section className="director-section">
+      <section className="director-section">
 
-    <div className="director-left">
+        <div className="director-left">
 
-      <span className="director-label">
-         Managing Director
-      </span>
+          <span className="director-label">
+            Managing Director
+          </span>
 
-      <h5>RAFTAAR FILM CITY LIMITED</h5>
+          <h5>RAFTAAR FILM CITY LIMITED</h5>
 
-      <h2>
-        Mr. <span>J.D Verma</span>
-      </h2>
+          <h2>
+            Mr. <span>J.D Verma</span>
+          </h2>
 
-      <h3>
-        Architect Behind India's Next Global Cinema Destination
-      </h3>
+          <h3>
+            Architect Behind India's Next Global Cinema Destination
+          </h3>
 
-      <p>
-        Mr. J.D. Verma is a visionary entrepreneur committed to
-        developing Raftaar Film City into a world-class destination
-        that blends entertainment, tourism and modern infrastructure.
-      </p>
+          <p>
+            Mr. J.D. Verma is a visionary entrepreneur committed to
+            developing Raftaar Film City into a world-class destination
+            that blends entertainment, tourism and modern infrastructure.
+          </p>
 
-      <div className="director-boxes">
+          <div className="director-boxes">
 
-        <div className="box">
-          <h2>1000+</h2>
-          <p>Acres Township</p>
+            <div className="box">
+              <h2>1000+</h2>
+              <p>Acres Township</p>
+            </div>
+
+            <div className="box">
+              <h2>5000+</h2>
+              <p>Investors & Families</p>
+            </div>
+
+          </div>
+
         </div>
 
-        <div className="box">
-          <h2>5000+</h2>
-          <p>Investors & Families</p>
+        <div className="director-right">
+
+          <img src={directorImg} alt="Director" />
+
+
+
         </div>
 
-      </div>
-
-    </div>
-
-    <div className="director-right">
-
-      <img src={directorImg} alt="Director" />
-
-      
-
-    </div>
-
-  </section>
+      </section>
 
       <section className="feature-section">
 
@@ -359,7 +360,7 @@ const Home = () => {
 
       </section>
 
-      
+
     </>
   );
 };
@@ -368,35 +369,3 @@ const Home = () => {
 export default Home;
 
 
-
-/*
-<section ref={heroRef} className="hero">
-        <video
-          ref={videoRef}
-          className="hero-video"
-          autoPlay
-          muted={isMuted}
-          loop
-          playsInline
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
-        <button className="sound-btn" onClick={toggleMute}>
-             {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
-         </button>
-
-        <div className="hero-overlay"></div>
-
-        <div className={`hero-content ${hideContent ? "hide-content" : ""}`}>
-          <span>Premium Township</span>
-
-          <h1>Shri Ram Film City</h1>
-
-          <p>
-            Experience luxury living surrounded by nature, world-class amenities
-            and thoughtfully planned. spaces.
-          </p>
-        </div>
-      </section>
-
-*/

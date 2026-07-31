@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Gallery.css";
 
 import img1 from "../assets/about.jpg";
@@ -11,7 +11,7 @@ import img7 from "../assets/light.jpg";
 import img8 from "../assets/img2.jpg";
 
 const Gallery = () => {
-
+const [selectedImage, setSelectedImage] = useState(null);
 const images=[
     img1,
     img2,
@@ -55,7 +55,11 @@ return (
                 key={index}
                 >
 
-                    <img src={img} alt="gallery"/>
+                    <img
+                        src={img}
+                        alt="gallery"
+                        onClick={() => setSelectedImage(img)}
+                      />
 
                     <div className="gallery-overlay">
 
@@ -85,6 +89,26 @@ return (
 
 
     </div>
+    {selectedImage && (
+  <div
+    className="image-popup"
+    onClick={() => setSelectedImage(null)}
+  >
+    <div
+      className="popup-content"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        className="close-btn"
+        onClick={() => setSelectedImage(null)}
+      >
+        ✕
+      </button>
+
+      <img src={selectedImage} alt="Preview" />
+    </div>
+  </div>
+)}
 
 
 </section>
