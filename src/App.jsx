@@ -10,6 +10,7 @@ import AboutDir from './Components/AboutDir';
 import Footer from './Components/Footer';
 import Gallery from './Components/Gallery';
 import Scrool from './Components/Scrool';
+import Gall from './Components/Gall';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/contact" element={<Contact/>} />
         <Route path="/gallery" element= {<Gallery />} />
         <Route path="/about-director" element={<AboutDir />} />
+        <Route path="/gall" element={<Gall />} />
       </Routes>
       <Footer />
     </div>

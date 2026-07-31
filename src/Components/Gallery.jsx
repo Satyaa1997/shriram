@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Gallery.css";
-
+import { useNavigate } from "react-router-dom";
 import img1 from "../assets/about.jpg";
 import img2 from "../assets/club.jpg";
 import img3 from "../assets/img3.jpg";
@@ -11,6 +11,7 @@ import img7 from "../assets/light.jpg";
 import img8 from "../assets/img2.jpg";
 
 const Gallery = () => {
+const navigate = useNavigate();
 const [selectedImage, setSelectedImage] = useState(null);
 const images=[
     img1,
@@ -81,9 +82,9 @@ return (
 
         <div className="gallery-more">
 
-            <button>
-                View More +
-            </button>
+            <button onClick={() => navigate("/gall")}>
+               View More +
+             </button>
 
         </div>
 
