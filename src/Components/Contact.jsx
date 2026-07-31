@@ -1,6 +1,5 @@
-import React from "react";
+
 import "./Contact.css";
-import officeImg from "../assets/raftr.jpeg";
 import heroImg from "../assets/about.jpg";
 
 import {
@@ -213,64 +212,7 @@ const Contact = () => {
       </section>
             {/* ================= DIRECTOR SECTION ================= */}
 
-      <section className="director-section">
-
-        <div className="director-container">
-
-          <div className="director-image">
-
-            <img
-              src={officeImg}
-              alt="Director"
-            />
-
-          </div>
-
-          <div className="director-content">
-
-            <span className="section-tag">
-              WELCOME
-            </span>
-
-            <h2>
-              We're Here To
-              <br />
-              Help You
-            </h2>
-
-            <p>
-              Shri Ram Film City is committed to providing complete
-              transparency and professional guidance to every customer.
-              Whether you're purchasing your first plot or making a
-              long-term investment, our experienced team is ready to
-              assist you at every step.
-            </p>
-
-            <div className="director-points">
-
-              <div className="point">
-                ✓ Free Site Visit Assistance
-              </div>
-
-              <div className="point">
-                ✓ Complete Investment Guidance
-              </div>
-
-              <div className="point">
-                ✓ Bank Loan Support
-              </div>
-
-              <div className="point">
-                ✓ Transparent Documentation
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
+      
 
 
      {/* ================= FAQ ================= */}

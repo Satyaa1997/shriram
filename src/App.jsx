@@ -8,6 +8,7 @@ import Aminities2 from './Components/Aminities2';
 import Contact from './Components/Contact';
 import AboutDir from './Components/AboutDir';
 import Footer from './Components/Footer';
+import Gallery from './Components/Gallery';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/project" element={<Project/>} />
         <Route path="/aminities2" element={<Aminities2 />} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/gallery" element= {<Gallery />} />
         <Route path="/about-director" element={<AboutDir />} />
       </Routes>
       <Footer />

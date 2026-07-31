@@ -213,6 +213,212 @@
 }
 
 
+/*==========================
+      ABOUT COMPANY
+==========================*/
+
+.about-company-section{
+    width:100%;
+    max-width:1400px;
+    margin:60px auto;
+    padding:0 4%;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+}
+
+/* LEFT */
+
+.about-company-left{
+    width:100%;
+}
+
+.about-company-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 18px;
+    border:1px solid #d8d8d8;
+    border-radius:30px;
+    background:#f8f8f8;
+    color:#071418;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.about-company-left h2{
+    font-size:40px;
+    color:#071418;
+    margin-bottom:22px;
+    line-height:1.0;
+    font-weight:700;
+}
+
+.about-company-left h2 span{
+    color:#e84c22;
+}
+
+.about-company-left h3{
+    font-size:28px;
+    color:#071418;
+    margin:25px 0 18px;
+    font-weight:700;
+}
+
+.about-company-left p{
+    font-size:16px;
+    line-height:1.3;
+    color:#666;
+    margin-bottom:18px;
+}
+
+/* CARD */
+
+.about-company-card{
+    margin-top:35px;
+    background:#fff;
+    padding:25px;
+    border-left:5px solid #f47b20;
+    border-radius:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.about-company-card h4{
+    font-size:20px;
+    color:#071418;
+    margin-bottom:12px;
+}
+
+.about-company-card p{
+    margin:0;
+    color:#666;
+}
+
+/* RIGHT */
+
+.about-company-right{
+    width:100%;
+}
+
+.about-company-right img{
+    width:100%;
+    height:620px;
+    object-fit:cover;
+    border-radius:18px;
+    display:block;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+/*==========================
+      TABLET
+==========================*/
+
+@media (max-width:992px){
+
+.about-company-section{
+    grid-template-columns:1fr;
+    gap:45px;
+}
+
+.about-company-right{
+    order:-1;
+}
+
+.about-company-right img{
+    height:500px;
+}
+
+.about-company-left h2{
+    font-size:40px;
+}
+
+.about-company-left h3{
+    font-size:30px;
+}
+
+}
+
+/*==========================
+      MOBILE
+==========================*/
+
+@media (max-width:768px){
+
+.about-company-section{
+    padding:0 20px;
+    margin:60px auto;
+}
+
+.about-company-left{
+    text-align:center;
+}
+
+.about-company-badge{
+    margin:0 auto 20px;
+}
+
+.about-company-left h2{
+    font-size:32px;
+}
+
+.about-company-left h3{
+    font-size:24px;
+}
+
+.about-company-left p{
+    font-size:15px;
+}
+
+.about-company-card{
+    text-align:left;
+    padding:20px;
+}
+
+.about-company-card h4{
+    font-size:20px;
+}
+
+.about-company-right img{
+    height:380px;
+}
+
+}
+
+/*==========================
+      SMALL MOBILE
+==========================*/
+
+@media (max-width:480px){
+
+.about-company-left h2{
+    font-size:28px;
+}
+
+.about-company-left h3{
+    font-size:22px;
+}
+
+.about-company-left p{
+    font-size:14px;
+    line-height:1.7;
+}
+
+.about-company-right img{
+    height:300px;
+}
+
+.about-company-card{
+    padding:18px;
+}
+
+.about-company-card h4{
+    font-size:18px;
+}
+
+}
+
 /* =========================================================
    INTRO SECTION
 ========================================================= */

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./About.css";
 import aboutMain from "../assets/about.jpg";
 import aboutSecond from "../assets/about.jpg";
+import aboutImg2 from "../assets/urban2.jpg"
 const About = () => {
 
   const [countStart, setCountStart] = useState(false);
@@ -159,6 +160,38 @@ const About = () => {
 
       </section>
 
+      {/* ================= About Section ================= */}
+
+<section className="about-company-section">
+
+  <div className="about-company-left">
+
+    <span className="about-company-badge">
+      🏢 Raftaar Group Real Estate
+    </span>
+
+    <h2>
+      <span>About</span> Raftaar Group
+    </h2>
+
+    <p>Our most extensive and renowned branch, RAFTAR Real Estate Pvt. Ltd., operates in the real estate sector. We have successfully completed numerous projects, including residential developments and land plotting projects. We provide a wide range of opportunities for our customers. Recently, we have launched a new project focused on both residential properties and land plotting, offering modern living solutions and excellent investment opportunities.</p>
+
+    <h3>Our Story</h3>
+
+    <p>RAFTAR Real Estate Pvt. Ltd. has been continuously working with you and across India for the past 10 years. We have worked tirelessly to turn our customers' dreams into reality. We have successfully completed around 10 residential and land plotting projects, and today our customers are fully satisfied with our marketing strategies and the facilities they desire. We have successfully served and satisfied thousands of people across India by providing them with trusted real estate solutions and better opportunities.</p>
+
+    <div className="about-company-card">
+      <h4>🚀 Why Choose Us?</h4>
+      <p>RAFTAR is continuously working with its dedicated team to build strong relationships and connect with more and more customers. We are committed to expanding our reach and bringing valuable real estate opportunities to our clients. We are also introducing several new projects across the world for our Indian customers, providing them with trusted investment options and modern lifestyle solutions.</p>
+    </div>
+
+  </div>
+
+  <div className="about-company-right">
+    <img src={aboutImg2} alt="About" />
+  </div>
+
+</section>
 
       {/* ================= STORY ================= */}
       <section className="about-story">
@@ -216,93 +249,6 @@ const About = () => {
               <strong>2014</strong>
               <small>Building a better future</small>
             </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* ================= VISION MISSION ================= */}
-      <section className="vision-section">
-
-        <div className="vision-heading">
-
-          <span className="section-label">
-            OUR PHILOSOPHY
-          </span>
-
-          <h2>
-            Driven By Purpose,
-            <br />
-            <em>Built For The Future</em>
-          </h2>
-
-        </div>
-
-
-        <div className="vision-grid">
-
-          <div className="vision-card">
-
-            <div className="vision-number">
-              01
-            </div>
-
-            <div className="vision-icon">
-              ◇
-            </div>
-
-            <h3>Our Vision</h3>
-
-            <p>
-              To create thoughtfully planned communities that
-              combine modern lifestyle, sustainable development
-              and long-term investment value.
-            </p>
-
-          </div>
-
-
-          <div className="vision-card active">
-
-            <div className="vision-number">
-              02
-            </div>
-
-            <div className="vision-icon">
-              ✦
-            </div>
-
-            <h3>Our Mission</h3>
-
-            <p>
-              To deliver quality real estate opportunities with
-              transparency, reliable infrastructure and a strong
-              commitment to customer satisfaction.
-            </p>
-
-          </div>
-
-
-          <div className="vision-card">
-
-            <div className="vision-number">
-              03
-            </div>
-
-            <div className="vision-icon">
-              ○
-            </div>
-
-            <h3>Our Values</h3>
-
-            <p>
-              Integrity, quality, transparency and trust form the
-              foundation of every relationship and every project
-              we undertake.
-            </p>
 
           </div>
 

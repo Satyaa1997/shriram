@@ -1,7 +1,5 @@
 import "./home.css";
-import { FaVolumeUp, FaVolumeMute, FaTimes } from "react-icons/fa";
-import React, { useEffect, useState, useRef } from "react";
-import heroVideo from "../assets/video.mp4";
+
 import Aminities from "./Aminities";
 import township from "../assets/township.jpg";
 import green from "../assets/img6.jpg";
@@ -10,131 +8,217 @@ import security from "../assets/security.jpg";
 import investment from "../assets/return.jpg";
 import location from "../assets/map.png";
 import FloatingVedio from "./FloatingVedio";
+import directorImg from "../assets/Director2.png"
 
 const Home = () => {
  
-  const [countStart, setCountStart] = useState(false);
-
-  const achievementRef = useRef(null);
-
- 
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setHideContent(true);
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, []);
-
-
-  useEffect(() => {
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-
-        if (entries[0].isIntersecting) {
-         setCountStart(true);
-         observer.disconnect();
-         }
-
-      },
-      {
-        threshold: 0.4
-      }
-    );
-    if (achievementRef.current) {
-
-      observer.observe(achievementRef.current);
-
-    }
-
-
-    return () => {
-
-      if (achievementRef.current) {
-
-        observer.unobserve(achievementRef.current);
-
-      }
-
-    }
-
-
-  }, []);
   return (
     <>
       <FloatingVedio />
+
       <Aminities />
 
+      <section className="luxury-section">
+
+  <div className="luxury-container">
 
 
-      <section className="achievement-section" ref={achievementRef}>
-        <div className="achievement-overlay"></div>
+    <div className="luxury-left">
 
-        <div className="achievement">
-          <div className="achievement-heading">
-            <span>WHY SHRI RAM FILM CITY</span>
-            <h2>Future-Ready Living</h2>
-            <p>
-              A premium township designed with modern infrastructure, green
-              spaces and world-class amenities.
-            </p>
-          </div>
+      <span>
+        WHY SHRI RAM FILM CITY
+      </span>
 
-          <div className="achievement-grid">
-            <div className="achievement-card">
-              <div className="number">
-                {countStart && <Counter end={50} symbol="+" />}
-              </div>
-              <div className="card-content">
-                <h3>Acres</h3>
-                <p>Premium Township Spread Across a Vast Landscape.</p>
-              </div>
-            </div>
+      <h2>
+        A Lifestyle Beyond
+        <br />
+        Ordinary Living
+      </h2>
 
-            <div className="achievement-card">
-              <div className="number">
-                {countStart && <Counter end={24} symbol="×7" />}
-              </div>
-              <div className="card-content">
-                <h3>Security</h3>
-                <p>Advanced Security with CCTV & Gated Community.</p>
-              </div>
-            </div>
+      <p>
+        A thoughtfully planned township designed with
+        modern infrastructure, premium amenities and
+        a peaceful environment for a better lifestyle.
+      </p>
 
-            <div className="achievement-card">
-              <div className="number">
-                {countStart && <Counter end={100} symbol="%" />}
-              </div>
-              <div className="card-content">
-                <h3>Green Zone</h3>
-                <p>Beautiful Parks, Landscapes & Eco-Friendly Living.</p>
-              </div>
-            </div>
 
-            <div className="achievement-card">
-              <div className="number">
-                {countStart && <Counter end={25} symbol="+" />}
-              </div>
-              <div className="card-content">
-                <h3>Amenities</h3>
-                <p>Club House, Gym, Temple, Shopping & More.</p>
-              </div>
-            </div>
+      <button>
+        Explore More →
+      </button>
 
-            <div className="achievement-card">
-              <div className="number">
-                {countStart && <Counter end={1} symbol="st" />}
-              </div>
-              <div className="card-content">
-                <h3>Film City</h3>
-                <p>One of the Most Unique Township Concepts in the Region.</p>
-              </div>
-            </div>
-          </div>
+
+    </div>
+
+
+
+    <div className="luxury-right">
+
+
+      <div className="feature-item">
+
+        <div className="feature-number">
+          01
         </div>
-      </section>
 
+        <div>
+          <h3>
+            Premium Location
+          </h3>
+
+          <p>
+            Strategically located with excellent
+            connectivity to major cities and highways.
+          </p>
+        </div>
+
+      </div>
+
+
+
+      <div className="feature-item">
+
+        <div className="feature-number">
+          02
+        </div>
+
+        <div>
+          <h3>
+            Future Growth Opportunity
+          </h3>
+
+          <p>
+            Smart investment destination with
+            high appreciation potential.
+          </p>
+        </div>
+
+      </div>
+
+
+
+
+      <div className="feature-item">
+
+        <div className="feature-number">
+          03
+        </div>
+
+        <div>
+          <h3>
+            Modern Infrastructure
+          </h3>
+
+          <p>
+            Wide roads, green spaces and planned
+            development for comfortable living.
+          </p>
+        </div>
+
+      </div>
+
+
+
+
+      <div className="feature-item">
+
+        <div className="feature-number">
+          04
+        </div>
+
+        <div>
+          <h3>
+            Secure Community
+          </h3>
+
+          <p>
+            Gated township with advanced security
+            and family-friendly environment.
+          </p>
+        </div>
+
+      </div>
+
+
+       <div className="feature-item">
+
+        <div className="feature-number">
+          05
+        </div>
+
+        <div>
+          <h3>
+           Future-Ready Development
+          </h3>
+
+          <p>
+            A next-generation township concept designed to
+             meet modern lifestyle needs and future expectations.
+          </p>
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+
+  </div>
+
+
+     </section>
+
+      {/* Director Section */}
+  <section className="director-section">
+
+    <div className="director-left">
+
+      <span className="director-label">
+         Managing Director
+      </span>
+
+      <h5>RAFTAAR FILM CITY LIMITED</h5>
+
+      <h2>
+        Mr. <span>J.D Verma</span>
+      </h2>
+
+      <h3>
+        Architect Behind India's Next Global Cinema Destination
+      </h3>
+
+      <p>
+        Mr. J.D. Verma is a visionary entrepreneur committed to
+        developing Raftaar Film City into a world-class destination
+        that blends entertainment, tourism and modern infrastructure.
+      </p>
+
+      <div className="director-boxes">
+
+        <div className="box">
+          <h2>1000+</h2>
+          <p>Acres Township</p>
+        </div>
+
+        <div className="box">
+          <h2>5000+</h2>
+          <p>Investors & Families</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div className="director-right">
+
+      <img src={directorImg} alt="Director" />
+
+      
+
+    </div>
+
+  </section>
 
       <section className="feature-section">
 
@@ -279,56 +363,7 @@ const Home = () => {
     </>
   );
 };
-const Counter = ({ end, symbol = "" }) => {
 
-  const [number, setNumber] = useState(0);
-
-
-  useEffect(() => {
-
-    let start = 0;
-
-    let speed = end / 80;
-
-
-    const timer = setInterval(() => {
-
-      start += Math.ceil(speed);
-
-
-      if (start >= end) {
-
-        start = end;
-
-        clearInterval(timer);
-
-      }
-
-
-      setNumber(start);
-
-
-    }, 30);
-
-
-
-    return () => clearInterval(timer);
-
-
-  }, [end]);
-
-
-  return (
-
-    <span>
-
-      {number}{symbol}
-
-    </span>
-
-  )
-
-}
 
 export default Home;
 
