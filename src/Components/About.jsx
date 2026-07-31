@@ -7,6 +7,8 @@ const About = () => {
 
   const [countStart, setCountStart] = useState(false);
 
+  const [showPopup, setShowPopup] = useState(false);
+
   const statsRef = useRef(null);
 
   useEffect(() => {
