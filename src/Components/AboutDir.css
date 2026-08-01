@@ -893,167 +893,47 @@
 
 
 /*=========================================
- TABLET RESPONSIVE
- 1024px
-=========================================*/
-
-
-@media(max-width:1024px){
-
-
-.director-hero{
-
-    height:75vh;
-
-}
-
-
-
-.director-hero-content{
-
-    left:5%;
-    max-width:600px;
-
-}
-
-
-
-.director-hero-content h1{
-
-    font-size:55px;
-
-}
-
-
-
-.director-container{
-
-    grid-template-columns:1fr;
-    gap:50px;
-
-}
-
-
-
-.director-image{
-
-    text-align:center;
-
-}
-
-
-
-.director-image img{
-
-    max-width:450px;
-
-}
-
-
-
-.director-content h2{
-
-    font-size:40px;
-
-}
-
-
-
-.director-highlights{
-
-    grid-template-columns:repeat(3,1fr);
-
-}
-
-
-
-.vision-grid{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-
-
-.leadership-container{
-
-    grid-template-columns:1fr;
-
-}
-
-
-
-.achievement-grid{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-
-.quote-container h2,
-.director-cta-content h2{
-
-    font-size:45px;
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-/*=========================================
  MOBILE RESPONSIVE
  768px
 =========================================*/
 
+@media (max-width:768px){
 
-@media(max-width:768px){
+  .director-hero{
+    height: 70vh;
+  }
 
+  .director-hero-content{
+    position: absolute;
+    left: 20px;
+    right: 20px;
 
-.director-hero{
+    top: auto;
+    bottom: 40px;      /* content niche aa jayega */
+    transform: none;   /* center positioning hata do */
 
-    height:70vh;
+    max-width: 90%;
+    text-align: left;
+  }
 
-}
+  .director-hero-content span{
+    font-size: 13px;
+    margin: 0 0 10px;
+    display: block;
+  }
 
+  .director-hero-content h1{
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 0 0 12px;
+  }
 
+  .director-hero-content p{
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+  }
 
-.director-hero-content{
-
-    left:25px;
-    right:25px;
-
-}
-
-
-
-.director-hero-content span{
-
-    font-size:14px;
-
-}
-
-
-
-.director-hero-content h1{
-
-    font-size:38px;
-
-}
-
-
-
-.director-hero-content p{
-
-    font-size:15px;
-
-}
 
 
 
@@ -1285,4 +1165,180 @@
 }
 
 
+}
+
+
+.section-tag{
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+}
+/*=========================================
+ TABLET RESPONSIVE (769px - 1024px)
+=========================================*/
+
+@media (max-width:1024px){
+
+  .director-hero{
+    height:75vh;
+  }
+
+  .director-hero-content{
+    left:40px;
+    right:40px;
+    top:50%;
+    transform:translateY(-50%);
+    max-width:600px;
+  }
+
+  .director-hero-content span{
+    font-size:15px;
+    letter-spacing:2px;
+  }
+
+  .director-hero-content h1{
+    font-size:46px;
+    line-height:1.2;
+    margin:10px 0;
+  }
+
+  .director-hero-content p{
+    font-size:17px;
+    line-height:1.7;
+  }
+
+  .director-intro,
+  .vision-section,
+  .leadership-section,
+  .achievement-section,
+  .director-quote-section,
+  .director-cta{
+    padding:80px 6%;
+  }
+
+  .director-container{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .director-image{
+    text-align:center;
+  }
+
+  .director-image img{
+    max-width:420px;
+  }
+
+  .director-content h2{
+    font-size:38px;
+  }
+
+  .director-content h4{
+    font-size:20px;
+  }
+
+  .director-content p{
+    font-size:16px;
+  }
+
+  .director-highlights{
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+
+  .highlight-card{
+    padding:22px 15px;
+  }
+
+  .vision-heading h2,
+  .leadership-left h2,
+  .achievement-heading h2{
+    font-size:38px;
+  }
+
+  .vision-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+  }
+
+  .vision-card{
+    padding:28px 20px;
+  }
+
+  .vision-card h3{
+    font-size:42px;
+  }
+
+  .vision-card h4{
+    font-size:20px;
+  }
+
+  .leadership-container{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .leadership-right{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .lead-card{
+    padding:22px;
+  }
+
+  .lead-card h3{
+    font-size:22px;
+  }
+
+  .achievement-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+  }
+
+  .achievement-card{
+    padding:28px 20px;
+  }
+
+  .achievement-card h3{
+    font-size:38px;
+  }
+
+  .achievement-card h4{
+    font-size:20px;
+  }
+
+  .quote-container h2,
+  .director-cta-content h2{
+    font-size:42px;
+  }
+
+  .quote-container p,
+  .director-cta-content p{
+    font-size:16px;
+  }
+
+  .director-btn{
+    padding:14px 32px;
+  }
+
+  .director-btn-outline{
+    padding:14px 32px;
+  }
+
+}
+.director-hero-content h1{
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.director-content h2{
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.quote-container h2,
+.director-cta-content h2{
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.director-content p,
+.quote-container p,
+.director-cta-content p{
+    font-size: clamp(1rem, 2vw, 1.125rem);
 }

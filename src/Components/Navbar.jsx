@@ -109,20 +109,20 @@ const Navbar = () => {
           </li>
           <li className={`dropdown ${aboutOpen ? "open" : ""}`}>
 
-            <button
-              type="button"
-              className="dropdown-toggle"
-              onClick={() => setAboutOpen(!aboutOpen)}
-            >
-              <div className="dropdown-left">
-                <FaInfoCircle />
-                <span>About</span>
-              </div>
+          <button
+  type="button"
+  className={`dropdown-toggle ${aboutOpen ? "active" : ""}`}
+  onClick={() => setAboutOpen(!aboutOpen)}
+>
+  <div className="dropdown-left">
+    <FaInfoCircle />
+    <span>About</span>
+  </div>
 
-              <span className="dropdown-arrow">
-                {aboutOpen ? "▲" : "▼"}
-              </span>
-            </button>
+  <span className={`dropdown-arrow ${aboutOpen ? "rotate" : ""}`}>
+    ▼
+  </span>
+</button>
 
             <ul className="dropdown-menu">
 
