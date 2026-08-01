@@ -103,262 +103,59 @@
 }
 
 /* ===========================
-   MINI PLAYER
-=========================== */
-
-.mini-player{
-
-    position: fixed;
-
-    right: 20px;
-    bottom: 20px;
-
-    width: 360px;
-    height: 220px;
-
-    border-radius: 18px;
-
-    overflow: hidden;
-
-    background: #000;
-
-    border: 3px solid #fff;
-
-    box-shadow:
-        0 18px 50px rgba(0,0,0,.45),
-        0 0 25px rgba(232,76,34,.25);
-
-    z-index: 9999;
-
-    animation: miniPopup .35s ease;
-}
-
-.mini-player video{
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    cursor: pointer;
-}
-.play-btn,
-.mini-play{
-    position:absolute;
-    left:10px;
-    bottom:10px;
-
-    width:38px;
-    height:38px;
-
-    border:none;
-    border-radius:50%;
-
-    background:#e84c22;
-    color:#fff;
-
-    cursor:pointer;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    font-size:15px;
-
-    transition:.3s;
-}
-
-.play-btn:hover,
-.mini-play:hover{
-    transform:scale(1.08);
-}
-/* ===========================
-   MINI BUTTONS
-=========================== */
-
-.mini-sound{
-
-    position: absolute;
-
-    right: 10px;
-    bottom: 10px;
-
-    width: 38px;
-    height: 38px;
-
-    border: none;
-    border-radius: 50%;
-
-    background: #e84c22;
-
-    color: #fff;
-
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 15px;
-
-    transition: .3s;
-}
-
-.mini-close{
-
-    position: absolute;
-
-    top: 10px;
-    right: 10px;
-
-    width: 34px;
-    height: 34px;
-
-    border: none;
-    border-radius: 50%;
-
-    background: rgba(0,0,0,.65);
-
-    color: #fff;
-
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transition: .3s;
-}
-
-.mini-close:hover{
-
-    background: #e84c22;
-    transform: rotate(90deg);
-
-}
-
-.mini-sound:hover{
-
-    transform: scale(1.08);
-
-}
-
-/* ===========================
-   ANIMATION
-=========================== */
-
-@keyframes miniPopup{
-
-    from{
-
-        opacity: 0;
-        transform: translateY(35px) scale(.9);
-
-    }
-
-    to{
-
-        opacity: 1;
-        transform: translateY(0) scale(1);
-
-    }
-
-}
-
-/* ===========================
-   TABLET
-=========================== */
-
-@media(max-width:768px){
-
-    .hero-content h1{
-        font-size: 42px;
-    }
-
-    .hero-content p{
-        font-size: 15px;
-    }
-
-    .mini-player{
-
-        width: 260px;
-        height: 160px;
-
-        right: 15px;
-        bottom: 15px;
-
-    }
-
-}
-
-/* ===========================
    MOBILE
 =========================== */
 
 @media(max-width:576px){
 
-     .hero{
-    height:100svh;      /* fallback ke liye niche 100vh bhi de sakte ho */
-    min-height:100svh;
+   .hero{
+    position: relative;
+    width:100%;
+    height:300px;      /* Dynamic viewport */
+    min-height:300px;
     margin-top:70px;
-  }
+    overflow:hidden;
+}
 
-    .hero-content{
+.hero-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:contain;   /* Full screen */
+    object-position:center;
+}
 
-        left: 6%;
-        bottom: 10%;
+.hero-overlay{
+    background:linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.25)
+    );
+}
 
-    }
+.hero-content{
+    left:20px;
+    right:20px;
+    bottom:35px;
+    max-width:100%;
+}
 
-    .hero-content h1{
+   .hero-content h1{
+    font-size:32px;
+    line-height:1.2;
+}
 
-        font-size: 30px;
+.hero-content p{
+    font-size:15px;
+    line-height:1.6;
+}
 
-    }
+.sound-btn{
+    width:45px;
+    height:45px;
+    right:15px;
+    bottom:15px;
+}
 
-    .hero-content p{
-
-        font-size: 14px;
-
-    }
-
-    .sound-btn{
-
-        width: 45px;
-        height: 45px;
-
-        font-size: 16px;
-
-    }
-
-    .mini-player{
-
-        width: 190px;
-        height: 120px;
-
-        right: 10px;
-        bottom: 10px;
-
-        border-radius: 12px;
-
-    }
-
-    .mini-sound{
-
-        width: 30px;
-        height: 30px;
-
-        font-size: 12px;
-
-    }
-
-    .mini-close{
-
-        width: 26px;
-        height: 26px;
-
-        font-size: 11px;
-
-    }
 
 }

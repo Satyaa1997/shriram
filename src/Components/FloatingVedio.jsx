@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./FloatingVedio.css";
 import heroVideo from "../assets/video.mp4";
+
 import {
     FaVolumeMute,
     FaVolumeUp,
-    FaTimes,
     FaPlay,
     FaPause,
 } from "react-icons/fa";
@@ -12,14 +12,14 @@ import {
 function FloatingVedio() {
     const heroRef = useRef(null);
     const heroVideoRef = useRef(null);
-    const floatingVideoRef = useRef(null);
+   
 
     const [showMini, setShowMini] = useState(false);
-    const [closed, setClosed] = useState(false);
+    
     const [heroMuted, setHeroMuted] = useState(true);
-    const [miniMuted, setMiniMuted] = useState(true);
+  
     const [heroPlaying, setHeroPlaying] = useState(true);
-    const [miniPlaying, setMiniPlaying] = useState(true);
+  
 
     const toggleHeroPlay = () => {
         if (!heroVideoRef.current) return;
@@ -33,17 +33,6 @@ function FloatingVedio() {
         setHeroPlaying(!heroPlaying);
     };
 
-    const toggleMiniPlay = () => {
-        if (!floatingVideoRef.current) return;
-
-        if (miniPlaying) {
-            floatingVideoRef.current.pause();
-        } else {
-            floatingVideoRef.current.play();
-        }
-
-        setMiniPlaying(!miniPlaying);
-    };
 
 
     // Hide hero content after 5 sec
@@ -123,29 +112,9 @@ function FloatingVedio() {
             heroVideoRef.current.muted = value;
         }
     };
-    const toggleMiniMute = () => {
-        const value = !miniMuted;
 
-        setMiniMuted(value);
 
-        if (floatingVideoRef.current) {
-            floatingVideoRef.current.muted = value;
-        }
-    };
-
-    // Click mini player
-    const scrollToHero = () => {
-        heroRef.current?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-        });
-    };
-
-    // Close Mini Player
-    const closeMini = () => {
-        setClosed(true);
-        setShowMini(false);
-    };
+   
 
     return (
         <>
@@ -198,44 +167,6 @@ function FloatingVedio() {
 
             </section>
 
-            {/* FLOATING PLAYER */}
-
-            {showMini && !closed && (
-                <div className="mini-player">
-
-                    <video
-                        ref={floatingVideoRef}
-                        autoPlay
-                        loop
-                        muted={miniMuted}
-                        playsInline
-                        onClick={scrollToHero}
-                    >
-                        <source src={heroVideo} type="video/mp4" />
-                    </video>
-
-                    <button
-                        className="mini-sound"
-                        onClick={toggleMiniMute}
-                    >
-                        {miniMuted ? <FaVolumeMute /> : <FaVolumeUp />}
-                    </button>
-                    <button
-                        className="mini-play"
-                        onClick={toggleMiniPlay}
-                    >
-                        {miniPlaying ? <FaPause /> : <FaPlay />}
-                    </button>
-
-                    <button
-                        className="mini-close"
-                        onClick={closeMini}
-                    >
-                        <FaTimes />
-                    </button>
-
-                </div>
-            )}
         </>
     );
 }
