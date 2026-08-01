@@ -83,38 +83,7 @@
     transition: .4s;
     
 }
-/* ==========================
-   LANGUAGE SWITCHER
-========================== */
 
-.language-box{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    margin-left:20px;
-}
-
-
-.language-box button{
-
-    border:1px solid#e84c22;
-    background:transparent;
-    color:#e84c22;
-    padding:8px 15px;
-    border-radius:25px;
-    font-size:14px;
-    font-weight:500;
-    cursor:pointer;
-    transition:0.3s ease;
-}
-
-
-.language-box button:hover{
-
-    background:#e84c22;
-    color:#fff;
-
-}
 
 /* ===========================
           LOGO
@@ -176,7 +145,18 @@
 
 }
 
+.nav-links a,
+.dropdown-toggle{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
 
+.nav-links svg,
+.dropdown-toggle svg{
+    font-size:18px;
+    color:#e84c22;
+}
 
 /* ===========================
         BUTTON
@@ -280,6 +260,8 @@
 .nav-links.active{
 
     right:0;
+    top :0px;
+    height: 100%;
 
 }
 
@@ -289,6 +271,14 @@
 
 }
 
+}
+
+.menu-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(3px);
+    z-index:998;
 }
 
 /* ===========================
@@ -317,10 +307,10 @@
 }
 
 .nav-links{
-    width:38%;
-    background:rgba(255,255,255,.96);
-    backdrop-filter:blur(15px);
-    box-shadow:-10px 0 30px rgba(0,0,0,.15);
+    width:55%;
+    max-width:280px;
+    right:-100%;
+    z-index:999;
 }
 
 .nav-links a{
@@ -348,7 +338,7 @@
 .dropdown-menu{
     position:absolute;
     top:100%;
-    left:0;
+    left:20 px;
     min-width:230px;
     background:#fff;
     border-radius:12px;
@@ -364,17 +354,38 @@
     z-index:999;
 }
 .dropdown-toggle{
+    width:100%;
     background:none;
     border:none;
     cursor:pointer;
-    font-size:16px;
-    font-weight:500;
-    color:#222;
+
     display:flex;
     align-items:center;
-    gap:6px;
+    justify-content:space-between;
+
+    padding:12px 25px;
+
+    color:#222;
+    font-size:18px;
+    font-weight:500;
     font-family:'Outfit',sans-serif;
 }
+.dropdown-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.dropdown-left svg{
+    color:#e84c22;
+    font-size:18px;
+}
+
+.dropdown-arrow{
+    margin-left:auto;
+    font-size:13px;
+}
+
 
 .dropdown-toggle:hover{
     color:#e84c22;
@@ -410,15 +421,28 @@
 @media (max-width:992px){
 
      .dropdown{
-        width:100%;
-        text-align:center;
-    }
+    width:100%;
+}
 
-     .dropdown-toggle{
-        width:100%;
-        justify-content:center;
-        padding:8px 0;
-    }
+.dropdown-toggle{
+    width:100%;
+    background:transparent;
+    border:none;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:12px 25px;   /* Home ke jaisa */
+
+    font-size:18px;
+    font-weight:500;
+    color:#222;
+    font-family:'Outfit',sans-serif;
+
+    cursor:pointer;
+    text-align:left;
+}
 
 .dropdown-toggle:hover{
     color:#e84c22;
@@ -446,7 +470,7 @@
 }
 
     .dropdown-menu li a{
-        padding:10px 0;
+        padding:10px 20;
         font-size:16px;
         color:#555;
     }
@@ -456,6 +480,45 @@
         color:#e84c22;
         padding-left:0;
     }
+
+}
+
+@media (max-width:992px){
+
+.nav-links li{
+    width:100%;
+}
+
+.nav-links a{
+    width:100%;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px 25px;
+    justify-content:flex-start;
+}
+
+.dropdown-toggle{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 25px;
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+.dropdown-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.dropdown-arrow{
+    margin-left:auto;
+    font-size:13px;
+}
 
 }
 

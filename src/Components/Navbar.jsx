@@ -5,11 +5,20 @@ import logo from "../assets/logo.png";
 import {
   FaMapMarkerAlt,
   FaEnvelope,
-  FaPhoneAlt,
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
+} from "react-icons/fa";
+import {
+  FaHome,
+  FaInfoCircle,
+  FaBuilding,
+  FaUserTie,
+  FaProjectDiagram,
+  FaImages,
+  FaPhoneAlt,
+  FaThLarge
 } from "react-icons/fa";
 
 
@@ -94,6 +103,7 @@ const Navbar = () => {
               className={({ isActive }) => (isActive ? "active" : "")}
               onClick={() => setMenuOpen(false)}
             >
+              <FaHome />
               Home
             </NavLink>
           </li>
@@ -104,7 +114,14 @@ const Navbar = () => {
               className="dropdown-toggle"
               onClick={() => setAboutOpen(!aboutOpen)}
             >
-              About <span>{aboutOpen ? "▲" : "▼"}</span>
+              <div className="dropdown-left">
+                <FaInfoCircle />
+                <span>About</span>
+              </div>
+
+              <span className="dropdown-arrow">
+                {aboutOpen ? "▲" : "▼"}
+              </span>
             </button>
 
             <ul className="dropdown-menu">
@@ -117,6 +134,7 @@ const Navbar = () => {
                     setAboutOpen(false);
                   }}
                 >
+                  <FaInfoCircle />
                   About Us
                 </NavLink>
               </li>
@@ -129,6 +147,7 @@ const Navbar = () => {
                     setAboutOpen(false);
                   }}
                 >
+                  <FaBuilding />
                   Company Overview
                 </NavLink>
               </li>
@@ -141,6 +160,7 @@ const Navbar = () => {
                     setAboutOpen(false);
                   }}
                 >
+                  <FaUserTie />
                   About Director
                 </NavLink>
               </li>
@@ -155,6 +175,7 @@ const Navbar = () => {
               className={({ isActive }) => (isActive ? "active" : "")}
               onClick={() => setMenuOpen(false)}
             >
+              <FaProjectDiagram />
               Project
             </NavLink>
           </li>
@@ -165,6 +186,7 @@ const Navbar = () => {
               className={({ isActive }) => (isActive ? "active" : "")}
               onClick={() => setMenuOpen(false)}
             >
+              <FaThLarge />
               Amenities
             </NavLink>
           </li>
@@ -175,6 +197,7 @@ const Navbar = () => {
               className={({ isActive }) => (isActive ? "active" : "")}
               onClick={() => setMenuOpen(false)}
             >
+              <FaImages />
               Gallary
             </NavLink>
           </li>
@@ -185,6 +208,7 @@ const Navbar = () => {
               className={({ isActive }) => (isActive ? "active" : "")}
               onClick={() => setMenuOpen(false)}
             >
+              <FaPhoneAlt />
               Contact
             </NavLink>
           </li>
@@ -213,6 +237,16 @@ const Navbar = () => {
           ☰
         </div>
       </nav>
+
+      {menuOpen && (
+        <div
+          className="menu-overlay"
+          onClick={() => {
+            setMenuOpen(false);
+            setAboutOpen(false);
+          }}
+        />
+      )}
 
     </header>
   );
