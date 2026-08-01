@@ -11,6 +11,8 @@ import Footer from './Components/Footer';
 import Gallery from './Components/Gallery';
 import Scrool from './Components/Scrool';
 import Gall from './Components/Gall';
+import Testimonial from './Components/Testimonial';
+import Projectimg from './Components/Projectimg';
 
 const App = () => {
   return (
@@ -26,6 +28,8 @@ const App = () => {
         <Route path="/gallery" element= {<Gallery />} />
         <Route path="/about-director" element={<AboutDir />} />
         <Route path="/gall" element={<Gall />} />
+        <Route path="/testimonial" element={<Testimonial />} />
+        <Route psth="/projectimg" element={<Projectimg />} />
       </Routes>
       <Footer />
     </div>

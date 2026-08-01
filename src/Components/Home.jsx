@@ -9,6 +9,8 @@ import investment from "../assets/return.jpg";
 import location from "../assets/map.png";
 import FloatingVedio from "./FloatingVedio";
 import directorImg from "../assets/Director2.png"
+import Testimonial from "./Testimonial";
+import Projectimg from "./Projectimg";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -37,9 +39,7 @@ const Home = () => {
             </h2>
 
             <p>
-              A thoughtfully planned township designed with
-              modern infrastructure, premium amenities and
-              a peaceful environment for a better lifestyle.
+            Shri Ram Film City is a thoughtfully planned township that combines modern infrastructure, premium amenities, lush green landscapes, and a peaceful environment to create an exceptional living experience. Designed with a vision for the future, it offers wide roads, well-planned residential plots, reliable utilities, and a secure gated community. Whether you are looking for your dream home or a smart investment opportunity, the township provides the perfect balance of comfort, convenience, luxury, and long-term value. With excellent connectivity, world-class facilities, and a rapidly developing location, Shri Ram Film City is an ideal destination for families, professionals, and investors seeking a brighter and more prosperous future.
             </p>
 
 
@@ -359,7 +359,10 @@ const Home = () => {
 
 
       </section>
+      
+      <Testimonial />
 
+      <Projectimg />
 
     </>
   );

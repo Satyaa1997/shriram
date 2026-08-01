@@ -136,7 +136,7 @@ function FloatingVedio() {
                     <source src={heroVideo} type="video/mp4" />
                 </video>
 
-                <div className="hero-overlay"></div>
+                
 
                 <div
                     className={`hero-content ${hideContent ? "hide-content" : ""
@@ -157,12 +157,6 @@ function FloatingVedio() {
                     className="sound-btn"
                     onClick={toggleHeroMute} >
                     {heroMuted ? <FaVolumeMute /> : <FaVolumeUp />}
-                </button>
-                <button
-                    className="play-btn"
-                    onClick={toggleHeroPlay}
-                >
-                    {heroPlaying ? <FaPause /> : <FaPlay />}
                 </button>
 
             </section>

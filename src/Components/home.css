@@ -540,7 +540,7 @@ body{
 
     line-height:1.2;
 
-    color:#e84c22;
+    color:#071418;
 
     font-family:'Cinzel',serif;
 
@@ -860,7 +860,7 @@ body{
 ========================================================= */
 .luxury-section{
 
-    padding:100px 7%;
+    padding:90px 4%;
 
     background:#071418;
 
@@ -880,6 +880,7 @@ body{
     gap:80px;
 
     align-items:center;
+     align-items:flex-start;
 
 }
 
@@ -890,6 +891,8 @@ body{
 .luxury-left{
 
     flex:1;
+    padding-top:10px;
+    
 
 }
 
@@ -903,7 +906,7 @@ body{
     font-size:14px;
 
     font-weight:700;
-
+    
 }
 
 
@@ -922,7 +925,7 @@ body{
 
     color:#bbb;
 
-    line-height:1.8;
+    line-height:1.7;
 
     font-size:17px;
 

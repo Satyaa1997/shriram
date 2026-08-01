@@ -13,7 +13,7 @@
     width:100%;
     height:45px;
     background:#e84c22;
-    color:black;
+    color:#fff;
     display:flex;
     align-items:center;
 }
@@ -43,7 +43,7 @@
 }
 
 .icon{
-    color:black;
+    color:#fff;
 }
 
 .social-icons{
