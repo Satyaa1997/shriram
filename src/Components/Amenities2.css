@@ -218,20 +218,22 @@ body{
 }
 
 .amenity-container{
-    max-width:1300px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    gap:70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
 }
 
-.reverse .amenity-container{
-    direction:rtl;
-}
+/* Alternate
+Content Left | Image Right
+*/
 
 .reverse .amenity-content{
-    direction:ltr;
+    order: 1;
+}
+
+.reverse .amenity-image{
+    order: 2;
 }
 
 .amenity-image{
@@ -389,6 +391,18 @@ body{
     font-size:45px;
 }
 
+    /* Reset alternate layout */
+    .reverse .amenity-image,
+    .reverse .amenity-content{
+        order: unset;
+    }
+
+    /* Mobile/Tablet order:
+       Image -> Content */
+    .amenity-image{
+        order:1;
+    }
+
 }
 
 /*=========================================
@@ -428,7 +442,7 @@ body{
 
 .hero-content p{
     font-size:12px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .hero-btn{

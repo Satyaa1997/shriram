@@ -379,50 +379,45 @@
 /* =========================================
         MOBILE
 ========================================= */
+@media (max-width:576px){
 
-@media (max-width: 576px) {
-
-    .footer-container {
-        grid-template-columns: 1fr;
-
-        padding: 55px 20px;
-
-        gap: 40px;
+    .footer-bottom{
+        display:flex;
+        flex-direction:column-reverse; /* Links upar, Copyright niche */
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        gap:15px;
+        padding:20px;
     }
 
-    .footer-box:last-child {
-        grid-column: auto;
+    .footer-bottom p{
+        width:100%;
+        text-align:center;
+        font-size:13px;
+        line-height:1.2;
+        margin:0;
     }
 
-    .footer-logo {
-        width: 145px;
+    .footer-bottom-links{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
     }
 
-    .footer-box h3 {
-        font-size: 18px;
+    .footer-bottom-links a{
+        justify-content:center;
+        text-align:center;
     }
 
-    .footer-about p {
-        font-size: 14px;
-    }
-
-    .footer-bottom {
-        padding: 18px 20px;
-    }
-
-    .footer-bottom-links {
-        flex-direction: column;
-
-        gap: 10px;
-    }
-
-    .footer-bottom p {
-        font-size: 12px;
-
-        line-height: 1.6;
+    .footer-bottom-links h4{
+        display:inline;
+        font-size:13px;
+        margin:0;
     }
 }
-
 
 /* =========================================
         SMALL MOBILE
@@ -444,3 +439,27 @@
     }
 }
 
+@media (max-width:576px){
+
+    .footer-box:nth-child(2){
+        margin-top: 130px;   /* 20px, 30px ya 40px apne hisaab se */
+    }
+
+}
+@media (max-width:576px){
+
+    .contact-item{
+        display:flex;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .contact-item span{
+        flex-shrink:0;
+    }
+
+    .contact-item p{
+        margin:0;
+        word-break:break-word;
+    }
+}
