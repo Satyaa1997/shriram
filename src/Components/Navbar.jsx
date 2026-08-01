@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./navbar.css";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
-
 import {
   FaMapMarkerAlt,
   FaEnvelope,
@@ -13,9 +12,40 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+
+
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setMenuOpen(false);
+        setAboutOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      setMenuOpen(false);
+      setAboutOpen(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header className="header">
@@ -52,7 +82,7 @@ const Navbar = () => {
       </div>
 
       {/* ===== Navbar ===== */}
-      <nav className="navbar">
+      <nav ref={navRef} className="navbar">
         <NavLink to="/" className="logo">
           <img src={logo} alt="Logo" />
         </NavLink>
@@ -69,55 +99,55 @@ const Navbar = () => {
           </li>
           <li className={`dropdown ${aboutOpen ? "open" : ""}`}>
 
-  <button
-    type="button"
-    className="dropdown-toggle"
-    onClick={() => setAboutOpen(!aboutOpen)}
-  >
-    About <span>{aboutOpen ? "▲" : "▼"}</span>
-  </button>
+            <button
+              type="button"
+              className="dropdown-toggle"
+              onClick={() => setAboutOpen(!aboutOpen)}
+            >
+              About <span>{aboutOpen ? "▲" : "▼"}</span>
+            </button>
 
-  <ul className="dropdown-menu">
+            <ul className="dropdown-menu">
 
-    <li>
-      <NavLink
-        to="/about"
-        onClick={() => {
-          setMenuOpen(false);
-          setAboutOpen(false);
-        }}
-      >
-        About Us
-      </NavLink>
-    </li>
+              <li>
+                <NavLink
+                  to="/about"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setAboutOpen(false);
+                  }}
+                >
+                  About Us
+                </NavLink>
+              </li>
 
-    <li>
-      <NavLink
-        to="/company-overview"
-        onClick={() => {
-          setMenuOpen(false);
-          setAboutOpen(false);
-        }}
-      >
-        Company Overview
-      </NavLink>
-    </li>
+              <li>
+                <NavLink
+                  to="/company-overview"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setAboutOpen(false);
+                  }}
+                >
+                  Company Overview
+                </NavLink>
+              </li>
 
-    <li>
-      <NavLink
-        to="/about-director"
-        onClick={() => {
-          setMenuOpen(false);
-          setAboutOpen(false);
-        }}
-      >
-        About Director
-      </NavLink>
-    </li>
+              <li>
+                <NavLink
+                  to="/about-director"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setAboutOpen(false);
+                  }}
+                >
+                  About Director
+                </NavLink>
+              </li>
 
-  </ul>
+            </ul>
 
-</li>
+          </li>
 
           <li>
             <NavLink
@@ -159,15 +189,27 @@ const Navbar = () => {
             </NavLink>
           </li>
 
-          
+
         </ul>
 
 
         <NavLink to="/contact" className="book-btn">
           Contact Now
         </NavLink>
+        <div
+          className="menu-btn"
+          onClick={() => {
+            setMenuOpen(prev => {
+              const next = !prev;
 
-        <div className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
+              if (!next) {
+                setAboutOpen(false);
+              }
+
+              return next;
+            });
+          }}
+        >
           ☰
         </div>
       </nav>
